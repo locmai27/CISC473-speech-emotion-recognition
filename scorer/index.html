@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Scorer</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f6f5f2;
+      --ink: #1c1b19;
+      --muted: #5e5a54;
+      --line: #ddd8cf;
+      --card: #fff;
+      --ok: #1f6b45;
+      --bad: #8d2b2b;
+      --accent: #1c1b19;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font: 15px/1.45 "Iowan Old Style", Palatino, Georgia, serif;
+      background: var(--bg);
+      color: var(--ink);
+    }
+    main { max-width: 820px; margin: 0 auto; padding: 40px 20px 64px; }
+    h1 { font-size: 28px; font-weight: 600; margin: 0 0 6px; letter-spacing: -0.02em; }
+    h2 { font-size: 13px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; margin: 0 0 10px; }
+    h3 { font-size: 16px; font-weight: 600; margin: 18px 0 8px; }
+    p.lead, .note { margin: 0 0 12px; color: var(--muted); }
+    p.lead { margin-bottom: 28px; }
+    section { background: var(--card); border: 1px solid var(--line); padding: 18px 18px 16px; margin-bottom: 14px; }
+    label { display: block; font-size: 13px; color: var(--muted); margin-bottom: 6px; }
+    code, button, textarea, table { font: 14px/1.4 ui-sans-serif, system-ui, sans-serif; }
+    textarea {
+      width: 100%; min-height: 160px; resize: vertical;
+      border: 1px solid var(--line); padding: 10px; background: #fff; color: var(--ink);
+    }
+    .actions { display: flex; gap: 8px; margin-top: 14px; flex-wrap: wrap; }
+    button {
+      border: 1px solid var(--accent); background: var(--accent); color: #fff;
+      padding: 8px 14px; cursor: pointer;
+    }
+    button.ghost { background: #fff; color: var(--ink); }
+    button:disabled { opacity: 0.4; cursor: default; }
+    table { width: 100%; border-collapse: collapse; margin-bottom: 8px; }
+    th, td { text-align: left; padding: 7px 8px; border-bottom: 1px solid var(--line); }
+    th { color: var(--muted); font-weight: 600; }
+    td.num, th.num { text-align: right; }
+    .stats { display: flex; gap: 22px; margin: 0 0 12px; }
+    .stats strong { display: block; font-size: 22px; font-weight: 600; }
+    .stats span { color: var(--muted); font-size: 13px; }
+    .ok { color: var(--ok); }
+    .bad { color: var(--bad); }
+    ul { margin: 8px 0 0; padding-left: 18px; }
+    .hidden { display: none; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Scorer</h1>
+    <p class="lead">Read a prediction table. Score it with UAR, WAR, and a confusion table.</p>
+
+    <section>
+      <h2>1 · Predictions</h2>
+      <label for="csv">Paste CSV, or drop a file. The header must be exactly <code>id,true,prediction,split,method,seed</code>.</label>
+      <textarea id="csv" placeholder="id,true,prediction,split,method,seed&#10;01-0,happy,happy,left_out_01,hubert,0"></textarea>
+      <div class="actions">
+        <button class="ghost" id="example" type="button">Load example</button>
+        <button id="run" type="button">Score</button>
+      </div>
+    </section>
+
+    <section id="result" class="hidden">
+      <h2>2 · Scores</h2>
+      <p id="check"></p>
+      <ul id="errors"></ul>
+      <div id="ok" class="hidden">
+        <p id="note" class="note"></p>
+        <div id="single" class="hidden">
+          <h3 id="single-name"></h3>
+          <div class="stats">
+            <div><strong id="single-uar"></strong><span>UAR</span></div>
+            <div><strong id="single-war"></strong><span>WAR</span></div>
+            <div><strong id="single-clips"></strong><span>clips</span></div>
+          </div>
+        </div>
+        <table id="compare" class="hidden">
+          <thead>
+            <tr>
+              <th>Method</th>
+              <th class="num">UAR</th>
+              <th class="num">WAR</th>
+              <th class="num">Clips</th>
+              <th class="num">Seeds</th>
+            </tr>
+          </thead>
+          <tbody id="scores"></tbody>
+        </table>
+        <div id="matrices"></div>
+        <div class="actions">
+          <button id="download" type="button">Download scores.json</button>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script>
+    const REQUIRED = ["id", "true", "prediction", "split", "method", "seed"];
+    const EXAMPLE = `id,true,prediction,split,method,seed
+01-0,happy,happy,left_out_01,hubert,0
+01-1,sad,happy,left_out_01,hubert,0
+02-0,happy,happy,left_out_02,hubert,0
+02-1,calm,calm,left_out_02,hubert,0
+01-0,happy,sad,left_out_01,bilstm,0
+01-1,sad,sad,left_out_01,bilstm,0
+02-0,happy,happy,left_out_02,bilstm,0
+02-1,calm,happy,left_out_02,bilstm,0`;
+
+    const csvEl = document.getElementById("csv");
+    const resultEl = document.getElementById("result");
+    let lastJson = null;
+
+    function parseCSV(text) {
+      const rows = [];
+      let row = [];
+      let cell = "";
+      let quoted = false;
+      let rowStart = 1;
+      const src = String(text).replace(/^\uFEFF/, "").replace(/\r\n/g, "\n").replace(/\r/g, "\n");
+      for (let i = 0; i < src.length; i++) {
+        const ch = src[i];
+        if (quoted) {
+          if (ch === '"') {
+            if (src[i + 1] === '"') { cell += '"'; i++; }
+            else quoted = false;
+          } else cell += ch;
+        } else if (ch === '"') {
+          if (cell !== "") {
+            return { error: `Row ${rows.length + 1}: a quote appears in the middle of a value. Wrap the whole value in quotes.` };
+          }
+          quoted = true;
+        } else if (ch === ",") {
+          row.push(cell);
+          cell = "";
+        } else if (ch === "\n") {
+          row.push(cell);
+          rows.push(row);
+          row = [];
+          cell = "";
+          if (quoted) return { error: `Row ${rowStart}: a quoted value was opened and never closed.` };
+          rowStart = rows.length + 1;
+        } else cell += ch;
+      }
+      if (quoted) return { error: `Row ${rowStart}: a quoted value was opened and never closed.` };
+      if (cell.length || row.length) {
+        row.push(cell);
+        rows.push(row);
+      }
+      return { rows };
+    }
+
+    function headerError(headers) {
+      const trimmed = headers.map((h) => h.trim());
+      if (trimmed.some((h) => h === "")) {
+        return "The header has an empty column name. Use exactly: id, true, prediction, split, method, seed.";
+      }
+      const counts = {};
+      trimmed.forEach((h) => { counts[h] = (counts[h] || 0) + 1; });
+      const dupes = Object.keys(counts).filter((h) => counts[h] > 1);
+      if (dupes.length) {
+        return `The header repeats ${dupes.map((h) => "“" + h + "”").join(", ")}. Each column name must appear once.`;
+      }
+      const missing = REQUIRED.filter((name) => !trimmed.includes(name));
+      const extra = trimmed.filter((name) => !REQUIRED.includes(name));
+      if (missing.length || extra.length) {
+        const parts = ["The header must be exactly: id, true, prediction, split, method, seed."];
+        if (missing.length) parts.push(`Missing: ${missing.join(", ")}.`);
+        if (extra.length) parts.push(`Not allowed: ${extra.join(", ")}.`);
+        parts.push(`Found: ${trimmed.filter(Boolean).join(", ") || "(empty header)"}.`);
+        return parts.join(" ");
+      }
+      return "";
+    }
+
+    function validate(rows) {
+      const errors = [];
+      if (!rows.length) {
+        return { errors: ["The table is empty. Paste a header and at least one prediction."] };
+      }
+      const headerMsg = headerError(rows[0]);
+      if (headerMsg) return { errors: [headerMsg] };
+
+      const header = rows[0].map((h) => h.trim());
+      const index = Object.fromEntries(header.map((name, i) => [name, i]));
+      const records = [];
+      const seen = new Map();
+
+      rows.slice(1).forEach((row, offset) => {
+        const line = offset + 2;
+        if (row.every((cell) => cell.trim() === "")) {
+          errors.push(`Row ${line} is blank. Remove that row.`);
+          return;
+        }
+        if (row.length !== header.length) {
+          errors.push(`Row ${line} has ${row.length} columns. The header has ${header.length}: id, true, prediction, split, method, seed.`);
+          return;
+        }
+        const item = {
+          id: row[index.id].trim(),
+          true: row[index.true].trim(),
+          prediction: row[index.prediction].trim(),
+          split: row[index.split].trim(),
+          method: row[index.method].trim(),
+          seed: row[index.seed].trim(),
+        };
+        REQUIRED.forEach((field) => {
+          if (!item[field]) errors.push(`Row ${line}: ${field} is empty.`);
+        });
+        if (REQUIRED.some((field) => !item[field])) return;
+        const key = [item.id, item.split, item.method, item.seed].join("\0");
+        if (seen.has(key)) {
+          errors.push(`Row ${line}: id “${item.id}” is already scored for split “${item.split}”, method “${item.method}”, seed ${item.seed} on row ${seen.get(key)}.`);
+          return;
+        }
+        seen.set(key, line);
+        records.push(item);
+      });
+
+      if (!records.length && !errors.length) {
+        errors.push("The table has a header but no prediction rows.");
+      }
+      return { errors, records };
+    }
+
+    function recallMetrics(rows) {
+      const labels = [...new Set(rows.map((row) => row.true))].sort((a, b) => a.localeCompare(b));
+      const columns = [...new Set(rows.flatMap((row) => [row.true, row.prediction]))].sort((a, b) => a.localeCompare(b));
+      const confusion = {};
+      labels.forEach((label) => {
+        confusion[label] = {};
+        columns.forEach((col) => { confusion[label][col] = 0; });
+      });
+      rows.forEach((row) => { confusion[row.true][row.prediction] += 1; });
+      const recall = {};
+      labels.forEach((label) => {
+        const support = rows.filter((row) => row.true === label).length;
+        const hits = rows.filter((row) => row.true === label && row.prediction === label).length;
+        recall[label] = hits / support;
+      });
+      const uar = labels.reduce((sum, label) => sum + recall[label], 0) / labels.length;
+      const correct = rows.filter((row) => row.true === row.prediction).length;
+      return { uar, war: correct / rows.length, n: rows.length, labels, columns, confusion, recall };
+    }
+
+    function sampleStd(values) {
+      if (values.length < 2) return 0;
+      const mean = values.reduce((sum, value) => sum + value, 0) / values.length;
+      const variance = values.reduce((sum, value) => sum + (value - mean) ** 2, 0) / (values.length - 1);
+      return Math.sqrt(variance);
+    }
+
+    function score(records) {
+      const methods = [...new Set(records.map((row) => row.method))].sort((a, b) => a.localeCompare(b));
+      return methods.map((method) => {
+        const rows = records.filter((row) => row.method === method);
+        const seeds = [...new Set(rows.map((row) => row.seed))].sort((a, b) => a.localeCompare(b, undefined, { numeric: true }));
+        const perSeed = seeds.map((seed) => recallMetrics(rows.filter((row) => row.seed === seed)));
+        const uars = perSeed.map((item) => item.uar);
+        const wars = perSeed.map((item) => item.war);
+        const mean = (values) => values.reduce((sum, value) => sum + value, 0) / values.length;
+        const pooled = recallMetrics(rows);
+        return {
+          method,
+          uar: mean(uars),
+          uar_std: sampleStd(uars),
+          war: mean(wars),
+          war_std: sampleStd(wars),
+          clips: perSeed[0].n,
+          seeds: seeds.length,
+          labels: pooled.labels,
+          columns: pooled.columns,
+          confusion: pooled.confusion,
+        };
+      });
+    }
+
+    function formatStat(mean, std, seeds) {
+      const base = mean.toFixed(3);
+      if (seeds < 2) return base;
+      return `${base} ± ${std.toFixed(3)}`;
+    }
+
+    function show(result) {
+      resultEl.classList.remove("hidden");
+      const check = document.getElementById("check");
+      const errorList = document.getElementById("errors");
+      const ok = document.getElementById("ok");
+      errorList.innerHTML = "";
+      document.getElementById("scores").innerHTML = "";
+      document.getElementById("matrices").innerHTML = "";
+      document.getElementById("single").classList.add("hidden");
+      document.getElementById("compare").classList.add("hidden");
+      lastJson = null;
+
+      if (result.errors.length) {
+        ok.classList.add("hidden");
+        check.className = "bad";
+        check.textContent = "No scores written.";
+        result.errors.forEach((msg) => {
+          const li = document.createElement("li");
+          li.textContent = msg;
+          errorList.appendChild(li);
+        });
+        return;
+      }
+
+      ok.classList.remove("hidden");
+      check.className = "ok";
+      const many = result.methods.length > 1;
+      const severalSeeds = result.methods.some((item) => item.seeds > 1);
+      check.textContent = many ? "Checks passed. Each method is scored on its own." : "Checks passed.";
+      const note = document.getElementById("note");
+      note.textContent = severalSeeds
+        ? "UAR is the mean recall of each true label. WAR is recall weighted by how many clips have that label. Seeds are averaged, with the sample standard deviation."
+        : "UAR is the mean recall of each true label. WAR is recall weighted by how many clips have that label.";
+
+      if (many) {
+        document.getElementById("compare").classList.remove("hidden");
+        const body = document.getElementById("scores");
+        result.methods.forEach((item) => {
+          const tr = document.createElement("tr");
+          tr.innerHTML = `<td>${item.method}</td><td class="num">${formatStat(item.uar, item.uar_std, item.seeds)}</td><td class="num">${formatStat(item.war, item.war_std, item.seeds)}</td><td class="num">${item.clips}</td><td class="num">${item.seeds}</td>`;
+          body.appendChild(tr);
+        });
+      } else {
+        const item = result.methods[0];
+        document.getElementById("single").classList.remove("hidden");
+        document.getElementById("single-name").textContent = item.method;
+        document.getElementById("single-uar").textContent = formatStat(item.uar, item.uar_std, item.seeds);
+        document.getElementById("single-war").textContent = formatStat(item.war, item.war_std, item.seeds);
+        document.getElementById("single-clips").textContent = String(item.clips);
+      }
+
+      const matrices = document.getElementById("matrices");
+      result.methods.forEach((item) => {
+        const title = document.createElement("h3");
+        title.textContent = many ? `${item.method} confusion` : "Confusion";
+        const caption = document.createElement("p");
+        caption.className = "note";
+        caption.textContent = item.seeds > 1
+          ? "Rows are the true label. Columns are the prediction. Counts add every seed."
+          : "Rows are the true label. Columns are the prediction.";
+        const table = document.createElement("table");
+        const head = document.createElement("thead");
+        const hr = document.createElement("tr");
+        hr.appendChild(document.createElement("th"));
+        item.columns.forEach((col) => {
+          const th = document.createElement("th");
+          th.className = "num";
+          th.textContent = col;
+          hr.appendChild(th);
+        });
+        head.appendChild(hr);
+        const tb = document.createElement("tbody");
+        item.labels.forEach((label) => {
+          const tr = document.createElement("tr");
+          const th = document.createElement("th");
+          th.textContent = label;
+          tr.appendChild(th);
+          item.columns.forEach((col) => {
+            const td = document.createElement("td");
+            td.className = "num";
+            td.textContent = String(item.confusion[label][col]);
+            tr.appendChild(td);
+          });
+          tb.appendChild(tr);
+        });
+        table.appendChild(head);
+        table.appendChild(tb);
+        matrices.appendChild(title);
+        matrices.appendChild(caption);
+        matrices.appendChild(table);
+      });
+
+      lastJson = JSON.stringify({ methods: result.methods }, null, 2) + "\n";
+    }
+
+    function run() {
+      const text = csvEl.value.trim();
+      if (!text) {
+        show({ errors: ["Paste a CSV first. The header must be: id, true, prediction, split, method, seed."] });
+        return;
+      }
+      const parsed = parseCSV(csvEl.value);
+      if (parsed.error) {
+        show({ errors: [parsed.error] });
+        return;
+      }
+      const checked = validate(parsed.rows);
+      if (checked.errors.length) {
+        show(checked);
+        return;
+      }
+      show({ methods: score(checked.records), errors: [] });
+    }
+
+    document.getElementById("example").addEventListener("click", () => {
+      csvEl.value = EXAMPLE;
+      run();
+    });
+    document.getElementById("run").addEventListener("click", run);
+    csvEl.addEventListener("dragover", (e) => e.preventDefault());
+    csvEl.addEventListener("drop", (e) => {
+      e.preventDefault();
+      const file = e.dataTransfer.files && e.dataTransfer.files[0];
+      if (!file) return;
+      const name = file.name.toLowerCase();
+      if (!name.endsWith(".csv") && !name.endsWith(".txt")) {
+        show({ errors: [`“${file.name}” is not a CSV. Drop a .csv file with the header id, true, prediction, split, method, seed.`] });
+        return;
+      }
+      file.text().then((text) => { csvEl.value = text; run(); }).catch(() => {
+        show({ errors: [`Could not read “${file.name}”.`] });
+      });
+    });
+    document.getElementById("download").addEventListener("click", () => {
+      if (!lastJson) return;
+      const blob = new Blob([lastJson], { type: "application/json" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = "scores.json";
+      a.click();
+      URL.revokeObjectURL(url);
+    });
+  </script>
+</body>
+</html>
