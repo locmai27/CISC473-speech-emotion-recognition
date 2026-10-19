@@ -2,7 +2,7 @@
 *.py text eol=lf
 *.md text eol=lf
 *.yml text eol=lf
-experiments/ssl/data/** -text
-experiments/ssl/results/** -text
+experiments/ssl/data/** -text whitespace=cr-at-eol
+experiments/ssl/results/** -text -whitespace
 *.png binary
 *.pdf binary

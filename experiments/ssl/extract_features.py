@@ -163,5 +163,3 @@ def download_model(name, cache_dir):
         LOG.info('[READY] %s: %.1f MiB', filename, path.stat().st_size / 1024**2)
     LOG.info('Model cache: %s', snapshot)
     return snapshot
-
-

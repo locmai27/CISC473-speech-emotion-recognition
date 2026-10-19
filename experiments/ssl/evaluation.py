@@ -104,5 +104,3 @@ def validation_manifest(splits, by_id, path, val_seed=42):
     if len(all_test_ids) != len(ids) or set(all_test_ids) != ids:
         raise ValueError('LOSO tests must cover every recording exactly once.')
     return manifest
-
-

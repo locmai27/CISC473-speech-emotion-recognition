@@ -23,4 +23,3 @@ class FrameDenseHead(nn.Module):
             weights = scores.softmax(dim=1)
         pooled = (hidden * weights.unsqueeze(-1)).sum(dim=1)
         return self.classifier(pooled)
-
