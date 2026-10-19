@@ -198,5 +198,7 @@ python experiments/ssl/download_artifacts.py --assets historical
 ```
 
 HuBERT layer probing and pitch/time/noise augmentation remain future work.
-Nothing here demonstrates an exact published-score reproduction or independently
-verifies the teammate's unavailable training implementation.
+Nothing here demonstrates an exact published-score reproduction. The checkpoint
+replay audit covers the SSL models. The merged repository also includes the
+teammate's MFCC source and predictions under the root `scripts/` and `results/`
+folders; their inclusion does not extend that checkpoint audit to the BiLSTM.

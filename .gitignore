@@ -3,3 +3,5 @@ __pycache__/
 .venv/
 experiments/ssl/artifacts/
 *.part
+.DS_Store
+data/RAVDESS/
