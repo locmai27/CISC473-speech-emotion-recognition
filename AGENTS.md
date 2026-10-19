@@ -2,7 +2,7 @@
 
 This repo is the CISC 473 speech emotion recognition project. The proposal is `docs/CISC_473_proj_proposal.pdf`.
 
-Vu owns the shared splitter and scorer, plus the HuBERT and wav2vec paths. Anastasia owns the clip table, audio preparation, augmentation, and the MFCC + BiLSTM path. Training code is not shared. Do not add a shared training UI or a shared training loop.
+Vu owns the shared splitter and scorer, plus the HuBERT and wav2vec paths. Anastasia owns the clip table, audio preparation, augmentation, and the MFCC + BiLSTM path. Vu's published SSL experiment code, results, and artifact manifest live in `experiments/ssl/`. Keep the SSL training pipeline separate from Anastasia's MFCC pipeline. Do not add a shared training UI or put training into the browser splitter or scorer.
 
 ## Splitter
 

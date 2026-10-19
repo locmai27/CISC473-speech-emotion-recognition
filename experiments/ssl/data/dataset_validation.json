@@ -1,0 +1,63 @@
+{
+  "source": "https://zenodo.org/records/1188976",
+  "archive": "Audio_Speech_Actors_01-24.zip",
+  "archive_bytes": 208468073,
+  "official_checksum": "md5:bc696df654c87fed845eb13823edef8a",
+  "checksum_verified": true,
+  "wav_count": 1440,
+  "speaker_counts": {
+    "01": 60,
+    "02": 60,
+    "03": 60,
+    "04": 60,
+    "05": 60,
+    "06": 60,
+    "07": 60,
+    "08": 60,
+    "09": 60,
+    "10": 60,
+    "11": 60,
+    "12": 60,
+    "13": 60,
+    "14": 60,
+    "15": 60,
+    "16": 60,
+    "17": 60,
+    "18": 60,
+    "19": 60,
+    "20": 60,
+    "21": 60,
+    "22": 60,
+    "23": 60,
+    "24": 60
+  },
+  "emotion_counts": {
+    "neutral": 96,
+    "calm": 192,
+    "happy": 192,
+    "sad": 192,
+    "angry": 192,
+    "fearful": 192,
+    "disgust": 192,
+    "surprised": 192
+  },
+  "audio_formats": [
+    {
+      "sample_rate": 48000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "count": 1435
+    },
+    {
+      "sample_rate": 48000,
+      "channels": 2,
+      "sample_width_bytes": 2,
+      "count": 5
+    }
+  ],
+  "total_duration_seconds": 5328.957333333323,
+  "loso_folds": 24,
+  "all_clip_ids_speakers_and_emotions_match": true,
+  "test_coverage_exactly_once": true,
+  "validation_speakers_in_supplied_splits": false
+}
