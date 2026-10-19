@@ -3,8 +3,6 @@
 Compare MFCC + BiLSTM with frozen HuBERT and wav2vec 2.0 on eight-class RAVDESS
 using speaker-independent leave-one-speaker-out (LOSO) evaluation.
 
-- [Shared splitter](splitter/index.html): turn `id,person,label` into fixed LOSO test sets.
-- [Shared scorer](scorer/index.html): score `id,true,prediction,split,method,seed` predictions.
 - [MFCC + BiLSTM scripts](scripts/README.md): Anastasia's preprocessing and training code.
 - [MFCC + BiLSTM results](results/): per-seed predictions, fold results, and confusion matrix.
 - [Shared dataset labels and outer splits](data/): clip IDs, speaker IDs, emotion labels,
@@ -15,7 +13,7 @@ using speaker-independent leave-one-speaker-out (LOSO) evaluation.
 - [Proposal](docs/CISC_473_proj_proposal.pdf).
 
 `main` combines the `vu-mai` and `anastasia-tumanov` branches. Vu owns the shared
-splitter/scorer and SSL experiments; Anastasia owns the MFCC + BiLSTM pipeline.
+evaluation infrastructure and SSL experiments; Anastasia owns the MFCC + BiLSTM pipeline.
 Each pipeline keeps its original paths and outputs.
 
 The shared outer split holds out one test speaker. The complete training scripts

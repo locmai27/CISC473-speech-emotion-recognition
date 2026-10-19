@@ -1,7 +1,6 @@
 # Frozen speech encoders: reproducible SSL experiments
 
-This folder publishes Vu's HuBERT and wav2vec 2.0 experiments. The browser splitter
-and scorer remain separate from training. These results adapt a published Dense
+This folder publishes Vu's HuBERT and wav2vec 2.0 experiments. These results adapt a published Dense
 head to final-layer, eight-class LOSO evaluation; they do not reproduce a paper's
 original numerical result or establish attention pooling as a new architecture.
 
@@ -139,7 +138,7 @@ python experiments/ssl/frame_experiment.py --phase extract --device cpu --featur
 ```
 
 The published manifest is already included in `data/validation_manifest.json`.
-The splitter command writes an independently verifiable cyclic manifest under
+The `prepare_splits.py` command writes an independently verifiable cyclic manifest under
 `artifacts/`; its speaker membership matches the published one.
 
 Extraction downloads pinned `facebook/hubert-base-ls960` and
@@ -156,7 +155,7 @@ partial runs are not included in a complete LOSO summary.
 
 ## Generate confusion matrices for every available model
 
-The plotter accepts the shared scorer's exact prediction header:
+The plotter accepts the exact prediction CSV header:
 `id,true,prediction,split,method,seed`. It keeps methods separate, detects duplicate
 test predictions, checks comparable seed coverage, and reports seed-level scores.
 
@@ -169,7 +168,7 @@ matrices, and a metrics JSON. Labels use the same alphabetical order in every
 new plot. Three-seed test plots aggregate 4,320 predictions over the same 1,440
 recordings, not 4,320 independent recordings.
 
-Additional scorer-format prediction files can be passed to `--predictions`
+Additional prediction CSV files can be passed to `--predictions`
 to generate multiple methods in one command. Model names must be distinct.
 Use `--partition validation` for validation CSVs; those legitimately repeat a clip
 in several folds and must not be interpreted as held-out LOSO test results.
