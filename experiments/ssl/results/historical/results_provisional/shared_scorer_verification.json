@@ -1,0 +1,25 @@
+{
+  "matched": true,
+  "source": "https://github.com/locmai27/CISC473-speech-emotion-recognition/blob/vu-mai/scorer/index.html",
+  "rows": 8640,
+  "methods": [
+    {
+      "method": "hubert_final_linear",
+      "uar": 0.6686197916666666,
+      "uar_std": 0.004269165705925759,
+      "war": 0.6726851851851853,
+      "war_std": 0.004926804780970589,
+      "clips": 1440,
+      "seeds": 3
+    },
+    {
+      "method": "wav2vec2_final_linear",
+      "uar": 0.5447048611111112,
+      "uar_std": 0.002631153570525608,
+      "war": 0.5493055555555556,
+      "war_std": 0.0018373272993504038,
+      "clips": 1440,
+      "seeds": 3
+    }
+  ]
+}

@@ -1,0 +1,200 @@
+{
+  "fingerprint": "87eb8e7ed8fc35f15211f230ac255d12dc4b62c0e57c62cc166430610f2a261f",
+  "method": "hubert_dense_attention",
+  "seed": 43,
+  "split": "left_out_14",
+  "test_person": "14",
+  "validation_persons": [
+    "18",
+    "20",
+    "23"
+  ],
+  "best_epoch": 8,
+  "history": [
+    {
+      "epoch": 1,
+      "training_loss": 1.8698690859476725,
+      "validation_loss": 1.6512971454196506,
+      "validation_uar": 0.328125,
+      "validation_war": 0.3333333333333333
+    },
+    {
+      "epoch": 2,
+      "training_loss": 1.3066787735621135,
+      "validation_loss": 1.254970121383667,
+      "validation_uar": 0.5104166666666667,
+      "validation_war": 0.5388888888888889
+    },
+    {
+      "epoch": 3,
+      "training_loss": 1.0040906588236491,
+      "validation_loss": 1.1914885097079806,
+      "validation_uar": 0.5416666666666667,
+      "validation_war": 0.5611111111111111
+    },
+    {
+      "epoch": 4,
+      "training_loss": 0.8461476747194926,
+      "validation_loss": 1.1940272914038763,
+      "validation_uar": 0.5416666666666667,
+      "validation_war": 0.5611111111111111
+    },
+    {
+      "epoch": 5,
+      "training_loss": 0.7065631715456645,
+      "validation_loss": 1.2235174655914307,
+      "validation_uar": 0.5677083333333333,
+      "validation_war": 0.5777777777777777
+    },
+    {
+      "epoch": 6,
+      "training_loss": 0.6432868083318074,
+      "validation_loss": 1.1712765137354533,
+      "validation_uar": 0.625,
+      "validation_war": 0.6333333333333333
+    },
+    {
+      "epoch": 7,
+      "training_loss": 0.5313768029212952,
+      "validation_loss": 1.2325106620788575,
+      "validation_uar": 0.5572916666666667,
+      "validation_war": 0.5888888888888889
+    },
+    {
+      "epoch": 8,
+      "training_loss": 0.48439503987630206,
+      "validation_loss": 1.146753766801622,
+      "validation_uar": 0.578125,
+      "validation_war": 0.5944444444444444
+    },
+    {
+      "epoch": 9,
+      "training_loss": 0.4506470815340678,
+      "validation_loss": 1.3500236564212376,
+      "validation_uar": 0.5989583333333333,
+      "validation_war": 0.6111111111111112
+    },
+    {
+      "epoch": 10,
+      "training_loss": 0.3908978494008382,
+      "validation_loss": 1.2359624094433255,
+      "validation_uar": 0.609375,
+      "validation_war": 0.6222222222222222
+    },
+    {
+      "epoch": 11,
+      "training_loss": 0.3426772129535675,
+      "validation_loss": 1.1775402228037517,
+      "validation_uar": 0.6354166666666666,
+      "validation_war": 0.6444444444444445
+    },
+    {
+      "epoch": 12,
+      "training_loss": 0.300674550930659,
+      "validation_loss": 1.3856245809131198,
+      "validation_uar": 0.6145833333333333,
+      "validation_war": 0.6277777777777778
+    }
+  ],
+  "test": {
+    "uar": 0.703125,
+    "war": 0.6833333333333333,
+    "recalls": [
+      1.0,
+      1.0,
+      0.125,
+      0.5,
+      1.0,
+      0.875,
+      0.5,
+      0.625
+    ],
+    "confusion": [
+      [
+        4,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        8,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        2,
+        5,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        4,
+        3,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        8,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        0,
+        7,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        2,
+        2,
+        4,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        5
+      ]
+    ],
+    "n": 60
+  },
+  "device": "cuda",
+  "torch_version": "2.7.1+cu126",
+  "elapsed_seconds": 6.7039999999997235,
+  "predictions_sha256": "633a63f4efefacae042d590c356ca77bd9e7d22aeedf73b29b1cfb215729558a"
+}

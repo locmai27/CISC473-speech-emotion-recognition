@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "checkpoints": 288,
+  "predictions_reproduced": 17280,
+  "device": "cuda",
+  "devices_in_training": {
+    "cuda": 288
+  },
+  "normalization_training_only": true,
+  "selection_uses_minimum_validation_loss": true
+}

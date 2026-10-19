@@ -1,0 +1,25 @@
+{
+  "model": "hubert",
+  "feature_fingerprint": "ffc3a15e4fd4ed48edd09fed25bae06aadc6f2544f90fb4394630fca64c8884d",
+  "features_sha256": "195415699c4ebfb31fef0dc8a11d981e443549bbb4730183ff8ec96ff69d622d",
+  "script_sha256": "55d79070c52eec7f4025a15b80dfc7a1dea4964320aed457045fe8e04d1b48ad",
+  "splits_sha256": "92f9907a3fb3df74674b998c264b644c51bc53dbc5e0c41f7cb16fd2818138db",
+  "manifest_sha256": "f56dad129899d0ab8b44644e1519d2782ee7e613852c0efef35ad006dc55341d",
+  "clip_table_sha256": "c4c96c5f61f55184d09a728ed4e94de64c17bfc710110484d7b9c87f36978bf0",
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "epochs": 20,
+  "batch_size": 32,
+  "learning_rate": 0.001,
+  "head": "Linear(768,8)",
+  "optimizer": "Adam",
+  "weight_decay": 0.0,
+  "loss": "unweighted_cross_entropy",
+  "standardization": "training_mean_and_population_std",
+  "selection": "highest_validation_UAR_then_lowest_validation_cross_entropy",
+  "torch": "2.7.1+cpu",
+  "device": "cpu"
+}

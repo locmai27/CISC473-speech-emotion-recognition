@@ -1,0 +1,200 @@
+{
+  "fingerprint": "5a43d58936891530b4643daafcce6ccebf4e9e848601de5c931936b7e3f54120",
+  "method": "hubert_dense_mean",
+  "seed": 42,
+  "split": "left_out_04",
+  "test_person": "04",
+  "validation_persons": [
+    "05",
+    "06",
+    "07"
+  ],
+  "best_epoch": 8,
+  "history": [
+    {
+      "epoch": 1,
+      "training_loss": 1.8938615385691324,
+      "validation_loss": 1.581565136379666,
+      "validation_uar": 0.375,
+      "validation_war": 0.4
+    },
+    {
+      "epoch": 2,
+      "training_loss": 1.3306765508651734,
+      "validation_loss": 1.204422950744629,
+      "validation_uar": 0.5052083333333334,
+      "validation_war": 0.5388888888888889
+    },
+    {
+      "epoch": 3,
+      "training_loss": 0.9676578410466512,
+      "validation_loss": 0.9517075962490505,
+      "validation_uar": 0.6302083333333334,
+      "validation_war": 0.6555555555555556
+    },
+    {
+      "epoch": 4,
+      "training_loss": 0.7591958141326904,
+      "validation_loss": 1.0106793615553114,
+      "validation_uar": 0.5833333333333333,
+      "validation_war": 0.6
+    },
+    {
+      "epoch": 5,
+      "training_loss": 0.6301069744427998,
+      "validation_loss": 0.9390900505913629,
+      "validation_uar": 0.609375,
+      "validation_war": 0.6166666666666667
+    },
+    {
+      "epoch": 6,
+      "training_loss": 0.544203298886617,
+      "validation_loss": 0.8242094993591309,
+      "validation_uar": 0.640625,
+      "validation_war": 0.6833333333333333
+    },
+    {
+      "epoch": 7,
+      "training_loss": 0.41581520477930706,
+      "validation_loss": 0.807370048099094,
+      "validation_uar": 0.6979166666666666,
+      "validation_war": 0.6833333333333333
+    },
+    {
+      "epoch": 8,
+      "training_loss": 0.37431208372116087,
+      "validation_loss": 0.7116510815090603,
+      "validation_uar": 0.7239583333333333,
+      "validation_war": 0.7444444444444445
+    },
+    {
+      "epoch": 9,
+      "training_loss": 0.3094131553173065,
+      "validation_loss": 0.7799505710601806,
+      "validation_uar": 0.671875,
+      "validation_war": 0.7
+    },
+    {
+      "epoch": 10,
+      "training_loss": 0.2639056674639384,
+      "validation_loss": 0.7320140361785888,
+      "validation_uar": 0.7239583333333333,
+      "validation_war": 0.7333333333333333
+    },
+    {
+      "epoch": 11,
+      "training_loss": 0.2303630276521047,
+      "validation_loss": 0.8440090815226237,
+      "validation_uar": 0.6927083333333333,
+      "validation_war": 0.7222222222222222
+    },
+    {
+      "epoch": 12,
+      "training_loss": 0.194987602631251,
+      "validation_loss": 0.7667148245705498,
+      "validation_uar": 0.7552083333333333,
+      "validation_war": 0.7555555555555555
+    }
+  ],
+  "test": {
+    "uar": 0.53125,
+    "war": 0.5666666666666667,
+    "recalls": [
+      0.0,
+      0.0,
+      0.625,
+      0.0,
+      0.75,
+      0.875,
+      1.0,
+      1.0
+    ],
+    "confusion": [
+      [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        3
+      ],
+      [
+        0,
+        0,
+        0,
+        7,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        5,
+        0,
+        0,
+        1,
+        0,
+        2
+      ],
+      [
+        1,
+        0,
+        6,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        6,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        0,
+        7,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        8,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        8
+      ]
+    ],
+    "n": 60
+  },
+  "device": "cuda",
+  "torch_version": "2.7.1+cu126",
+  "elapsed_seconds": 5.514999999999418,
+  "predictions_sha256": "b8deb143b2a3b2a22ab97afaddcea7c5b67ff9505afd833daa942748802f0e7b"
+}

@@ -1,0 +1,451 @@
+{
+  "matched": true,
+  "source": "https://github.com/locmai27/CISC473-speech-emotion-recognition/blob/vu-mai/scorer/index.html",
+  "rows": 17280,
+  "methods": [
+    {
+      "method": "hubert_dense_attention",
+      "uar": 0.648654513888889,
+      "uar_std": 0.013042516667809624,
+      "war": 0.6550925925925927,
+      "war_std": 0.010401223119750414,
+      "clips": 1440,
+      "seeds": 3,
+      "labels": [
+        "angry",
+        "calm",
+        "disgust",
+        "fearful",
+        "happy",
+        "neutral",
+        "sad",
+        "surprised"
+      ],
+      "columns": [
+        "angry",
+        "calm",
+        "disgust",
+        "fearful",
+        "happy",
+        "neutral",
+        "sad",
+        "surprised"
+      ],
+      "confusion": {
+        "angry": {
+          "angry": 441,
+          "calm": 5,
+          "disgust": 33,
+          "fearful": 17,
+          "happy": 43,
+          "neutral": 1,
+          "sad": 15,
+          "surprised": 21
+        },
+        "calm": {
+          "angry": 2,
+          "calm": 405,
+          "disgust": 6,
+          "fearful": 16,
+          "happy": 18,
+          "neutral": 47,
+          "sad": 82,
+          "surprised": 0
+        },
+        "disgust": {
+          "angry": 24,
+          "calm": 7,
+          "disgust": 439,
+          "fearful": 8,
+          "happy": 24,
+          "neutral": 4,
+          "sad": 50,
+          "surprised": 20
+        },
+        "fearful": {
+          "angry": 26,
+          "calm": 1,
+          "disgust": 9,
+          "fearful": 376,
+          "happy": 45,
+          "neutral": 1,
+          "sad": 60,
+          "surprised": 58
+        },
+        "happy": {
+          "angry": 49,
+          "calm": 9,
+          "disgust": 22,
+          "fearful": 59,
+          "happy": 324,
+          "neutral": 30,
+          "sad": 40,
+          "surprised": 43
+        },
+        "neutral": {
+          "angry": 8,
+          "calm": 42,
+          "disgust": 0,
+          "fearful": 5,
+          "happy": 30,
+          "neutral": 159,
+          "sad": 40,
+          "surprised": 4
+        },
+        "sad": {
+          "angry": 12,
+          "calm": 87,
+          "disgust": 42,
+          "fearful": 51,
+          "happy": 60,
+          "neutral": 42,
+          "sad": 276,
+          "surprised": 6
+        },
+        "surprised": {
+          "angry": 22,
+          "calm": 0,
+          "disgust": 27,
+          "fearful": 39,
+          "happy": 51,
+          "neutral": 3,
+          "sad": 24,
+          "surprised": 410
+        }
+      }
+    },
+    {
+      "method": "hubert_dense_mean",
+      "uar": 0.6712239583333334,
+      "uar_std": 0.004510548978043951,
+      "war": 0.6773148148148148,
+      "war_std": 0.005258248468333568,
+      "clips": 1440,
+      "seeds": 3,
+      "labels": [
+        "angry",
+        "calm",
+        "disgust",
+        "fearful",
+        "happy",
+        "neutral",
+        "sad",
+        "surprised"
+      ],
+      "columns": [
+        "angry",
+        "calm",
+        "disgust",
+        "fearful",
+        "happy",
+        "neutral",
+        "sad",
+        "surprised"
+      ],
+      "confusion": {
+        "angry": {
+          "angry": 453,
+          "calm": 3,
+          "disgust": 21,
+          "fearful": 14,
+          "happy": 46,
+          "neutral": 3,
+          "sad": 16,
+          "surprised": 20
+        },
+        "calm": {
+          "angry": 0,
+          "calm": 417,
+          "disgust": 5,
+          "fearful": 9,
+          "happy": 11,
+          "neutral": 52,
+          "sad": 77,
+          "surprised": 5
+        },
+        "disgust": {
+          "angry": 27,
+          "calm": 7,
+          "disgust": 419,
+          "fearful": 8,
+          "happy": 39,
+          "neutral": 4,
+          "sad": 62,
+          "surprised": 10
+        },
+        "fearful": {
+          "angry": 16,
+          "calm": 2,
+          "disgust": 6,
+          "fearful": 410,
+          "happy": 26,
+          "neutral": 0,
+          "sad": 55,
+          "surprised": 61
+        },
+        "happy": {
+          "angry": 52,
+          "calm": 9,
+          "disgust": 8,
+          "fearful": 34,
+          "happy": 372,
+          "neutral": 27,
+          "sad": 36,
+          "surprised": 38
+        },
+        "neutral": {
+          "angry": 10,
+          "calm": 52,
+          "disgust": 0,
+          "fearful": 1,
+          "happy": 20,
+          "neutral": 167,
+          "sad": 26,
+          "surprised": 12
+        },
+        "sad": {
+          "angry": 10,
+          "calm": 93,
+          "disgust": 36,
+          "fearful": 55,
+          "happy": 58,
+          "neutral": 39,
+          "sad": 280,
+          "surprised": 5
+        },
+        "surprised": {
+          "angry": 20,
+          "calm": 1,
+          "disgust": 26,
+          "fearful": 30,
+          "happy": 56,
+          "neutral": 13,
+          "sad": 22,
+          "surprised": 408
+        }
+      }
+    },
+    {
+      "method": "wav2vec2_dense_attention",
+      "uar": 0.5026041666666666,
+      "uar_std": 0.010477524049108736,
+      "war": 0.5074074074074074,
+      "war_std": 0.009063320347431453,
+      "clips": 1440,
+      "seeds": 3,
+      "labels": [
+        "angry",
+        "calm",
+        "disgust",
+        "fearful",
+        "happy",
+        "neutral",
+        "sad",
+        "surprised"
+      ],
+      "columns": [
+        "angry",
+        "calm",
+        "disgust",
+        "fearful",
+        "happy",
+        "neutral",
+        "sad",
+        "surprised"
+      ],
+      "confusion": {
+        "angry": {
+          "angry": 391,
+          "calm": 4,
+          "disgust": 66,
+          "fearful": 16,
+          "happy": 42,
+          "neutral": 0,
+          "sad": 6,
+          "surprised": 51
+        },
+        "calm": {
+          "angry": 4,
+          "calm": 351,
+          "disgust": 20,
+          "fearful": 12,
+          "happy": 18,
+          "neutral": 69,
+          "sad": 98,
+          "surprised": 4
+        },
+        "disgust": {
+          "angry": 74,
+          "calm": 8,
+          "disgust": 310,
+          "fearful": 21,
+          "happy": 49,
+          "neutral": 28,
+          "sad": 40,
+          "surprised": 46
+        },
+        "fearful": {
+          "angry": 17,
+          "calm": 6,
+          "disgust": 17,
+          "fearful": 336,
+          "happy": 78,
+          "neutral": 1,
+          "sad": 41,
+          "surprised": 80
+        },
+        "happy": {
+          "angry": 46,
+          "calm": 28,
+          "disgust": 25,
+          "fearful": 84,
+          "happy": 212,
+          "neutral": 34,
+          "sad": 53,
+          "surprised": 94
+        },
+        "neutral": {
+          "angry": 2,
+          "calm": 74,
+          "disgust": 11,
+          "fearful": 2,
+          "happy": 33,
+          "neutral": 124,
+          "sad": 35,
+          "surprised": 7
+        },
+        "sad": {
+          "angry": 3,
+          "calm": 119,
+          "disgust": 44,
+          "fearful": 50,
+          "happy": 74,
+          "neutral": 53,
+          "sad": 210,
+          "surprised": 23
+        },
+        "surprised": {
+          "angry": 36,
+          "calm": 5,
+          "disgust": 49,
+          "fearful": 104,
+          "happy": 69,
+          "neutral": 26,
+          "sad": 29,
+          "surprised": 258
+        }
+      }
+    },
+    {
+      "method": "wav2vec2_dense_mean",
+      "uar": 0.4967447916666667,
+      "uar_std": 0.00651041666666663,
+      "war": 0.5057870370370371,
+      "war_std": 0.007024995789580307,
+      "clips": 1440,
+      "seeds": 3,
+      "labels": [
+        "angry",
+        "calm",
+        "disgust",
+        "fearful",
+        "happy",
+        "neutral",
+        "sad",
+        "surprised"
+      ],
+      "columns": [
+        "angry",
+        "calm",
+        "disgust",
+        "fearful",
+        "happy",
+        "neutral",
+        "sad",
+        "surprised"
+      ],
+      "confusion": {
+        "angry": {
+          "angry": 398,
+          "calm": 4,
+          "disgust": 57,
+          "fearful": 15,
+          "happy": 33,
+          "neutral": 0,
+          "sad": 7,
+          "surprised": 62
+        },
+        "calm": {
+          "angry": 3,
+          "calm": 366,
+          "disgust": 22,
+          "fearful": 8,
+          "happy": 23,
+          "neutral": 58,
+          "sad": 94,
+          "surprised": 2
+        },
+        "disgust": {
+          "angry": 75,
+          "calm": 12,
+          "disgust": 318,
+          "fearful": 18,
+          "happy": 42,
+          "neutral": 26,
+          "sad": 45,
+          "surprised": 40
+        },
+        "fearful": {
+          "angry": 16,
+          "calm": 6,
+          "disgust": 17,
+          "fearful": 318,
+          "happy": 84,
+          "neutral": 3,
+          "sad": 45,
+          "surprised": 87
+        },
+        "happy": {
+          "angry": 45,
+          "calm": 33,
+          "disgust": 28,
+          "fearful": 77,
+          "happy": 206,
+          "neutral": 34,
+          "sad": 55,
+          "surprised": 98
+        },
+        "neutral": {
+          "angry": 8,
+          "calm": 81,
+          "disgust": 14,
+          "fearful": 1,
+          "happy": 33,
+          "neutral": 104,
+          "sad": 41,
+          "surprised": 6
+        },
+        "sad": {
+          "angry": 2,
+          "calm": 123,
+          "disgust": 50,
+          "fearful": 46,
+          "happy": 65,
+          "neutral": 49,
+          "sad": 211,
+          "surprised": 30
+        },
+        "surprised": {
+          "angry": 34,
+          "calm": 8,
+          "disgust": 53,
+          "fearful": 99,
+          "happy": 72,
+          "neutral": 16,
+          "sad": 30,
+          "surprised": 264
+        }
+      }
+    }
+  ]
+}

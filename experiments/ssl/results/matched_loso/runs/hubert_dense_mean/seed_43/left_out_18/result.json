@@ -1,0 +1,214 @@
+{
+  "fingerprint": "5a43d58936891530b4643daafcce6ccebf4e9e848601de5c931936b7e3f54120",
+  "method": "hubert_dense_mean",
+  "seed": 43,
+  "split": "left_out_18",
+  "test_person": "18",
+  "validation_persons": [
+    "19",
+    "20",
+    "21"
+  ],
+  "best_epoch": 10,
+  "history": [
+    {
+      "epoch": 1,
+      "training_loss": 1.8889141877492268,
+      "validation_loss": 1.5970259348551432,
+      "validation_uar": 0.39583333333333337,
+      "validation_war": 0.4222222222222222
+    },
+    {
+      "epoch": 2,
+      "training_loss": 1.3525518258412679,
+      "validation_loss": 1.2432775073581273,
+      "validation_uar": 0.4947916666666667,
+      "validation_war": 0.5055555555555555
+    },
+    {
+      "epoch": 3,
+      "training_loss": 0.9858081309000651,
+      "validation_loss": 1.073825634850396,
+      "validation_uar": 0.609375,
+      "validation_war": 0.6111111111111112
+    },
+    {
+      "epoch": 4,
+      "training_loss": 0.7749772000312806,
+      "validation_loss": 0.9875219874911838,
+      "validation_uar": 0.625,
+      "validation_war": 0.6444444444444445
+    },
+    {
+      "epoch": 5,
+      "training_loss": 0.6151809016863505,
+      "validation_loss": 0.9116411844889323,
+      "validation_uar": 0.6614583333333334,
+      "validation_war": 0.6666666666666666
+    },
+    {
+      "epoch": 6,
+      "training_loss": 0.5658140476544699,
+      "validation_loss": 0.9026494026184082,
+      "validation_uar": 0.671875,
+      "validation_war": 0.6944444444444444
+    },
+    {
+      "epoch": 7,
+      "training_loss": 0.42214632232983906,
+      "validation_loss": 0.927420785692003,
+      "validation_uar": 0.6510416666666666,
+      "validation_war": 0.6777777777777778
+    },
+    {
+      "epoch": 8,
+      "training_loss": 0.3545691287517548,
+      "validation_loss": 0.8784203211466471,
+      "validation_uar": 0.6927083333333334,
+      "validation_war": 0.7
+    },
+    {
+      "epoch": 9,
+      "training_loss": 0.32274332602818806,
+      "validation_loss": 0.8771829711066352,
+      "validation_uar": 0.6875,
+      "validation_war": 0.6944444444444444
+    },
+    {
+      "epoch": 10,
+      "training_loss": 0.26400235772132874,
+      "validation_loss": 0.8246061166127523,
+      "validation_uar": 0.7395833333333333,
+      "validation_war": 0.75
+    },
+    {
+      "epoch": 11,
+      "training_loss": 0.21979200919469197,
+      "validation_loss": 0.8427334785461426,
+      "validation_uar": 0.734375,
+      "validation_war": 0.7277777777777777
+    },
+    {
+      "epoch": 12,
+      "training_loss": 0.20555504302183786,
+      "validation_loss": 0.9589809046851264,
+      "validation_uar": 0.6666666666666666,
+      "validation_war": 0.6944444444444444
+    },
+    {
+      "epoch": 13,
+      "training_loss": 0.16228163023789724,
+      "validation_loss": 0.9367101881239149,
+      "validation_uar": 0.6875,
+      "validation_war": 0.7111111111111111
+    },
+    {
+      "epoch": 14,
+      "training_loss": 0.16637590964635213,
+      "validation_loss": 0.9491265879737006,
+      "validation_uar": 0.7447916666666667,
+      "validation_war": 0.75
+    }
+  ],
+  "test": {
+    "uar": 0.609375,
+    "war": 0.65,
+    "recalls": [
+      0.0,
+      1.0,
+      0.75,
+      0.625,
+      0.375,
+      0.875,
+      1.0,
+      0.25
+    ],
+    "confusion": [
+      [
+        0,
+        1,
+        0,
+        3,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        8,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        6,
+        0,
+        0,
+        2,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        5,
+        0,
+        0,
+        2,
+        0
+      ],
+      [
+        0,
+        0,
+        3,
+        0,
+        3,
+        0,
+        2,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        0,
+        7,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        8,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        5,
+        2
+      ]
+    ],
+    "n": 60
+  },
+  "device": "cuda",
+  "torch_version": "2.7.1+cu126",
+  "elapsed_seconds": 5.625,
+  "predictions_sha256": "21e74257170c7daecf0f661c819dbf7f0aaacdc03478ff2f2f05bdf294b65d0b"
+}

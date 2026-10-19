@@ -1,0 +1,200 @@
+{
+  "fingerprint": "5a43d58936891530b4643daafcce6ccebf4e9e848601de5c931936b7e3f54120",
+  "method": "wav2vec2_dense_mean",
+  "seed": 44,
+  "split": "left_out_03",
+  "test_person": "03",
+  "validation_persons": [
+    "04",
+    "05",
+    "06"
+  ],
+  "best_epoch": 8,
+  "history": [
+    {
+      "epoch": 1,
+      "training_loss": 1.8124400742848714,
+      "validation_loss": 1.647931734720866,
+      "validation_uar": 0.3125,
+      "validation_war": 0.3333333333333333
+    },
+    {
+      "epoch": 2,
+      "training_loss": 1.4030673027038574,
+      "validation_loss": 1.5408872392442492,
+      "validation_uar": 0.38541666666666663,
+      "validation_war": 0.40555555555555556
+    },
+    {
+      "epoch": 3,
+      "training_loss": 1.206389728387197,
+      "validation_loss": 1.346281803978814,
+      "validation_uar": 0.484375,
+      "validation_war": 0.48333333333333334
+    },
+    {
+      "epoch": 4,
+      "training_loss": 0.9702566925684611,
+      "validation_loss": 1.3753733846876357,
+      "validation_uar": 0.47916666666666663,
+      "validation_war": 0.4777777777777778
+    },
+    {
+      "epoch": 5,
+      "training_loss": 0.8493686882654826,
+      "validation_loss": 1.3408759117126465,
+      "validation_uar": 0.4791666666666667,
+      "validation_war": 0.49444444444444446
+    },
+    {
+      "epoch": 6,
+      "training_loss": 0.7517776759465535,
+      "validation_loss": 1.236101426018609,
+      "validation_uar": 0.546875,
+      "validation_war": 0.5444444444444444
+    },
+    {
+      "epoch": 7,
+      "training_loss": 0.63262397925059,
+      "validation_loss": 1.2089437166849772,
+      "validation_uar": 0.5520833333333334,
+      "validation_war": 0.55
+    },
+    {
+      "epoch": 8,
+      "training_loss": 0.5467978564898173,
+      "validation_loss": 1.1855820655822753,
+      "validation_uar": 0.5833333333333333,
+      "validation_war": 0.5833333333333334
+    },
+    {
+      "epoch": 9,
+      "training_loss": 0.45543508370717367,
+      "validation_loss": 1.2247112274169922,
+      "validation_uar": 0.5833333333333334,
+      "validation_war": 0.5833333333333334
+    },
+    {
+      "epoch": 10,
+      "training_loss": 0.38512640794118247,
+      "validation_loss": 1.3644709163241917,
+      "validation_uar": 0.5520833333333333,
+      "validation_war": 0.5555555555555556
+    },
+    {
+      "epoch": 11,
+      "training_loss": 0.34948567191759744,
+      "validation_loss": 1.2667457050747342,
+      "validation_uar": 0.5416666666666667,
+      "validation_war": 0.5444444444444444
+    },
+    {
+      "epoch": 12,
+      "training_loss": 0.2687778902053833,
+      "validation_loss": 1.3480652279324001,
+      "validation_uar": 0.5520833333333334,
+      "validation_war": 0.5611111111111111
+    }
+  ],
+  "test": {
+    "uar": 0.546875,
+    "war": 0.5166666666666667,
+    "recalls": [
+      1.0,
+      0.375,
+      0.0,
+      0.25,
+      0.875,
+      1.0,
+      0.875,
+      0.0
+    ],
+    "confusion": [
+      [
+        4,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        3,
+        1,
+        0,
+        2,
+        0,
+        2,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        3,
+        4,
+        1,
+        0
+      ],
+      [
+        0,
+        4,
+        0,
+        2,
+        0,
+        2,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        7,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        8,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        7,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        2,
+        6,
+        0,
+        0
+      ]
+    ],
+    "n": 60
+  },
+  "device": "cuda",
+  "torch_version": "2.7.1+cu126",
+  "elapsed_seconds": 5.1560000000026776,
+  "predictions_sha256": "a3a3b105791ca9ab53cf68921e073f7240ec1d72f4861e9721849316cebfe3b4"
+}

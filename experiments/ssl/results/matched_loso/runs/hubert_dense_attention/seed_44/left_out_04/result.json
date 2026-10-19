@@ -1,0 +1,200 @@
+{
+  "fingerprint": "5a43d58936891530b4643daafcce6ccebf4e9e848601de5c931936b7e3f54120",
+  "method": "hubert_dense_attention",
+  "seed": 44,
+  "split": "left_out_04",
+  "test_person": "04",
+  "validation_persons": [
+    "05",
+    "06",
+    "07"
+  ],
+  "best_epoch": 8,
+  "history": [
+    {
+      "epoch": 1,
+      "training_loss": 1.8816098086039226,
+      "validation_loss": 1.6363051732381184,
+      "validation_uar": 0.375,
+      "validation_war": 0.4
+    },
+    {
+      "epoch": 2,
+      "training_loss": 1.347552841504415,
+      "validation_loss": 1.3634268124898274,
+      "validation_uar": 0.41666666666666663,
+      "validation_war": 0.4444444444444444
+    },
+    {
+      "epoch": 3,
+      "training_loss": 1.0704623699188232,
+      "validation_loss": 1.099697028266059,
+      "validation_uar": 0.5052083333333334,
+      "validation_war": 0.5333333333333333
+    },
+    {
+      "epoch": 4,
+      "training_loss": 0.832124806245168,
+      "validation_loss": 0.964980951944987,
+      "validation_uar": 0.5572916666666666,
+      "validation_war": 0.5888888888888889
+    },
+    {
+      "epoch": 5,
+      "training_loss": 0.6784861318270365,
+      "validation_loss": 0.8760268105400933,
+      "validation_uar": 0.6510416666666667,
+      "validation_war": 0.6722222222222223
+    },
+    {
+      "epoch": 6,
+      "training_loss": 0.604075440565745,
+      "validation_loss": 0.8602988772922092,
+      "validation_uar": 0.6927083333333333,
+      "validation_war": 0.7111111111111111
+    },
+    {
+      "epoch": 7,
+      "training_loss": 0.5481754895051321,
+      "validation_loss": 0.8673778798845079,
+      "validation_uar": 0.6302083333333334,
+      "validation_war": 0.6444444444444445
+    },
+    {
+      "epoch": 8,
+      "training_loss": 0.5039942332108815,
+      "validation_loss": 0.7961407608456081,
+      "validation_uar": 0.6875,
+      "validation_war": 0.6888888888888889
+    },
+    {
+      "epoch": 9,
+      "training_loss": 0.42606945435206095,
+      "validation_loss": 1.0722651958465577,
+      "validation_uar": 0.6614583333333333,
+      "validation_war": 0.6611111111111111
+    },
+    {
+      "epoch": 10,
+      "training_loss": 0.36049259940783185,
+      "validation_loss": 0.9043614917331272,
+      "validation_uar": 0.703125,
+      "validation_war": 0.7166666666666667
+    },
+    {
+      "epoch": 11,
+      "training_loss": 0.34242657860120135,
+      "validation_loss": 0.8252260208129882,
+      "validation_uar": 0.7239583333333333,
+      "validation_war": 0.7222222222222222
+    },
+    {
+      "epoch": 12,
+      "training_loss": 0.36205225030581156,
+      "validation_loss": 0.8245336002773709,
+      "validation_uar": 0.6822916666666667,
+      "validation_war": 0.6888888888888889
+    }
+  ],
+  "test": {
+    "uar": 0.625,
+    "war": 0.6166666666666667,
+    "recalls": [
+      0.75,
+      0.375,
+      0.625,
+      0.0,
+      0.875,
+      0.875,
+      1.0,
+      0.5
+    ],
+    "confusion": [
+      [
+        3,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        3,
+        0,
+        4,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        5,
+        0,
+        0,
+        1,
+        0,
+        2
+      ],
+      [
+        1,
+        0,
+        7,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        7,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        7,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        8,
+        0
+      ],
+      [
+        0,
+        0,
+        3,
+        0,
+        1,
+        0,
+        0,
+        4
+      ]
+    ],
+    "n": 60
+  },
+  "device": "cuda",
+  "torch_version": "2.7.1+cu126",
+  "elapsed_seconds": 5.078000000001339,
+  "predictions_sha256": "160bf17a92b903fb01f866b0efa1be6234f07b288b0d76f325ca9aab6bfe967a"
+}

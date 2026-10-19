@@ -1,0 +1,7 @@
+{
+  "devices": {
+    "cuda": 288
+  },
+  "total_fit_compute_seconds": 1407.7660000000324,
+  "orchestrator_elapsed_seconds": 1793.9850000000006
+}

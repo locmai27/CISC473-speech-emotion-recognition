@@ -1,0 +1,19 @@
+{
+  "complete": true,
+  "fits": 288,
+  "configurations": 4,
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "folds_per_seed": 24,
+  "predictions": 17280,
+  "cyclic_speaker_rule_verified": true,
+  "checkpoint_replay_passed": true,
+  "shared_scorer_matched": true,
+  "feature_cache_verified": true,
+  "validation_manifest_sha256": "3d2f393e9c9aa555d866d7e6fd462ebb8d37e24f0197d77d25eb1ff80062da44",
+  "completed_at_utc": "2026-10-19T15:15:15.264728+00:00",
+  "report": "midterm_results.md"
+}

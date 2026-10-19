@@ -1,0 +1,39 @@
+{
+  "benchmark_only": true,
+  "real_training_not_run": true,
+  "torch": "2.7.1+cu126",
+  "device": "cuda",
+  "threads": 4,
+  "batch_size": 32,
+  "frames_per_batch": 250,
+  "measured_steps_per_head": 40,
+  "models": {
+    "mean": {
+      "parameters": 115976,
+      "median_training_step_seconds": 0.0023889499998404062,
+      "median_evaluation_step_seconds": 0.0004353499998615007,
+      "estimated_20_epoch_fit_compute_seconds": 1.8687146998618118,
+      "fits_per_head": 144,
+      "estimated_compute_minutes_all_fits": 4.484915279668348
+    },
+    "attention": {
+      "parameters": 116104,
+      "median_training_step_seconds": 0.0024331499998879735,
+      "median_evaluation_step_seconds": 0.00046455000028799986,
+      "estimated_20_epoch_fit_compute_seconds": 1.9058690999499959,
+      "fits_per_head": 144,
+      "estimated_compute_minutes_all_fits": 4.57408583987999
+    }
+  },
+  "total_classifier_fits_in_projection": 288,
+  "estimated_total_compute_minutes": 9.059001119548338,
+  "excludes": [
+    "encoder feature extraction",
+    "disk I/O",
+    "data normalization",
+    "batch preparation",
+    "checkpoint saving",
+    "hyperparameter search"
+  ],
+  "warning": "A timing projection is not a guaranteed end-to-end runtime. Real one-fold timing is needed before a full run."
+}

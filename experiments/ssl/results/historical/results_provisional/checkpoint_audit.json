@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "classifiers_reloaded": 144,
+  "predictions_reproduced": 8640,
+  "training_only_normalization_verified": true,
+  "test_ids_match_supplied_loso": true
+}

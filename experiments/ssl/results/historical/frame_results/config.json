@@ -1,0 +1,18 @@
+{
+  "epochs": 20,
+  "patience": 4,
+  "batch_size": 32,
+  "learning_rate": 0.001,
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "script_sha256": "7775071c0b17f956cd05d8dbb37ae49e86d8b0c6eead1f5ed55f998b8026da42",
+  "head_script_sha256": "93ef4a39543f3ba98649eb7d6432bbc367153f8d2d698ad7fbc1cf2318d1d45e",
+  "validation_manifest_sha256": "f56dad129899d0ab8b44644e1519d2782ee7e613852c0efef35ad006dc55341d",
+  "features": {
+    "hubert": "5cc43d537d9f8d79332993a3ae63574e4fcf20bf19126c969a9280840ddb599b",
+    "wav2vec2": "5b2634427f984edb8175efc72a9532bd144593a78ddd473cbe926dd16fde8469"
+  }
+}

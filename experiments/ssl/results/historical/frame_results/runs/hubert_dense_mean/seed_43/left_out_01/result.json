@@ -1,0 +1,200 @@
+{
+  "fingerprint": "87eb8e7ed8fc35f15211f230ac255d12dc4b62c0e57c62cc166430610f2a261f",
+  "method": "hubert_dense_mean",
+  "seed": 43,
+  "split": "left_out_01",
+  "test_person": "01",
+  "validation_persons": [
+    "15",
+    "17",
+    "21"
+  ],
+  "best_epoch": 8,
+  "history": [
+    {
+      "epoch": 1,
+      "training_loss": 1.8780899127324422,
+      "validation_loss": 1.6863224665323893,
+      "validation_uar": 0.35416666666666663,
+      "validation_war": 0.37777777777777777
+    },
+    {
+      "epoch": 2,
+      "training_loss": 1.339794495900472,
+      "validation_loss": 1.3724594116210938,
+      "validation_uar": 0.4791666666666667,
+      "validation_war": 0.5111111111111111
+    },
+    {
+      "epoch": 3,
+      "training_loss": 0.960619432926178,
+      "validation_loss": 1.3410570356580946,
+      "validation_uar": 0.5260416666666666,
+      "validation_war": 0.5222222222222223
+    },
+    {
+      "epoch": 4,
+      "training_loss": 0.7557408221562704,
+      "validation_loss": 1.4165508694118925,
+      "validation_uar": 0.453125,
+      "validation_war": 0.4777777777777778
+    },
+    {
+      "epoch": 5,
+      "training_loss": 0.5904058933258056,
+      "validation_loss": 1.1285184807247586,
+      "validation_uar": 0.6145833333333334,
+      "validation_war": 0.6111111111111112
+    },
+    {
+      "epoch": 6,
+      "training_loss": 0.5110961016019185,
+      "validation_loss": 1.2275661998324925,
+      "validation_uar": 0.609375,
+      "validation_war": 0.6055555555555555
+    },
+    {
+      "epoch": 7,
+      "training_loss": 0.39874294837315877,
+      "validation_loss": 1.4171970473395454,
+      "validation_uar": 0.5572916666666666,
+      "validation_war": 0.5666666666666667
+    },
+    {
+      "epoch": 8,
+      "training_loss": 0.35660833756128946,
+      "validation_loss": 1.1073956701490615,
+      "validation_uar": 0.6927083333333333,
+      "validation_war": 0.6833333333333333
+    },
+    {
+      "epoch": 9,
+      "training_loss": 0.3014227827390035,
+      "validation_loss": 1.341188038720025,
+      "validation_uar": 0.5833333333333333,
+      "validation_war": 0.5722222222222222
+    },
+    {
+      "epoch": 10,
+      "training_loss": 0.24321476519107818,
+      "validation_loss": 1.2383786890241835,
+      "validation_uar": 0.6510416666666667,
+      "validation_war": 0.6388888888888888
+    },
+    {
+      "epoch": 11,
+      "training_loss": 0.2060279498497645,
+      "validation_loss": 1.2689558664957683,
+      "validation_uar": 0.6458333333333333,
+      "validation_war": 0.6333333333333333
+    },
+    {
+      "epoch": 12,
+      "training_loss": 0.17420726190010707,
+      "validation_loss": 1.4126727686987983,
+      "validation_uar": 0.609375,
+      "validation_war": 0.5944444444444444
+    }
+  ],
+  "test": {
+    "uar": 0.640625,
+    "war": 0.6333333333333333,
+    "recalls": [
+      0.75,
+      1.0,
+      1.0,
+      0.0,
+      0.375,
+      1.0,
+      0.875,
+      0.125
+    ],
+    "confusion": [
+      [
+        3,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        8,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        8,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        2,
+        3,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        4,
+        0,
+        3,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        8,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        7,
+        1
+      ],
+      [
+        1,
+        0,
+        6,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    ],
+    "n": 60
+  },
+  "device": "cuda",
+  "torch_version": "2.7.1+cu126",
+  "elapsed_seconds": 6.531000000000859,
+  "predictions_sha256": "dbe987c90405cffc0933e53ca33421efbb1f1b1489d6f58b9a6527805ea60957"
+}

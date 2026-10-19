@@ -1,0 +1,7 @@
+{
+  "devices": {
+    "cuda": 288
+  },
+  "matched_devices_within_all_144_pairs": true,
+  "total_fit_compute_seconds": 1666.0149999999921
+}

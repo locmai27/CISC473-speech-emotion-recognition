@@ -1,0 +1,12 @@
+{
+  "complete": true,
+  "fits": 288,
+  "configurations": 4,
+  "seeds_per_configuration": 3,
+  "folds_per_seed": 24,
+  "predictions": 17280,
+  "checkpoint_replay_passed": true,
+  "shared_scorer_matched": true,
+  "report": "midterm_results.md",
+  "completed_at": "2026-10-19 03:00:48"
+}
