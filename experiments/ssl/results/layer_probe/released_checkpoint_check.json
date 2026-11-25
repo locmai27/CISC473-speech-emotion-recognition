@@ -1,0 +1,8 @@
+{
+  "seed": 42,
+  "checkpoints": 24,
+  "test_predictions": 1440,
+  "agreement_with_published_predictions": 1.0,
+  "replayed_uar": 0.6686197916666667,
+  "replayed_war": 0.6736111111111112
+}
