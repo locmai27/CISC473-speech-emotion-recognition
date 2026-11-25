@@ -1,0 +1,9 @@
+{
+  "compared_clips": 1440,
+  "frame_count_mismatches": 0,
+  "max_abs_difference": 0.0004553794860839844,
+  "max_relative_l2_difference": 1.1814448953373358e-05,
+  "mean_relative_l2_difference": 2.7053010144742176e-06,
+  "tolerance_relative_l2": 0.001,
+  "passed": true
+}

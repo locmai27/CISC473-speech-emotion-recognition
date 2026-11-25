@@ -1,0 +1,28 @@
+{
+  "epochs": 20,
+  "patience": 4,
+  "batch_size": 32,
+  "learning_rate": 0.001,
+  "weight_decay": 0.0,
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "pooling": "mean",
+  "head_script_sha256": "3d202b421a136aa17229b05b7836fbf02d370416e9a2beda98dcac6f7334ec53",
+  "training_code_sha256": "d37befd8544e666a14a5f02caec0cb196d6e8c98c6f0609bb4bf971b41290cbb",
+  "validation_manifest_sha256": "3d2f393e9c9aa555d866d7e6fd462ebb8d37e24f0197d77d25eb1ff80062da44",
+  "clip_table_sha256": "c4c96c5f61f55184d09a728ed4e94de64c17bfc710110484d7b9c87f36978bf0",
+  "splits_sha256": "92f9907a3fb3df74674b998c264b644c51bc53dbc5e0c41f7cb16fd2818138db",
+  "aug_exposure": "matched: one uniformly chosen version (original or 1 of 3 copies) per training clip per epoch",
+  "aug_normalization": "mean/std over originals and copies of training-speaker clips",
+  "features": {
+    "aug/layer_06": "416ab1bca9957276ebeb150645854ad7a2c204f3937028ac6b309440a90d8c37",
+    "aug/layer_12": "452d9d8f429065582bbfdab6ca40bea07fe440815f9bddcd1f1b44c0c803d3c4",
+    "clean/layer_03": "4eb22bf49551cca6913ef6d8a3cf14ed2f0fd087aea9a9e4e623e601dc110a1c",
+    "clean/layer_06": "022715a80671ef355c1e2d04fa4e4d79abb8370ee14b197709e9c3296ca95794",
+    "clean/layer_09": "093d1c34a5ae49f5e51c5f47945542a87ef3626b7048e71ecdd2d005c4b84ddf",
+    "clean/layer_12": "9cad14ee5c3dd21d04e5084940b5d5d38490055b4ad3bfc2e682df065fb69bdb"
+  }
+}

@@ -1,0 +1,9 @@
+true_label,angry,calm,disgust,fearful,happy,neutral,sad,surprised
+angry,452,2,24,14,44,4,16,20
+calm,0,420,6,10,14,51,73,2
+disgust,30,6,413,7,40,4,63,13
+fearful,18,1,5,408,25,0,51,68
+happy,49,8,9,43,366,28,34,39
+neutral,11,49,0,1,25,160,31,11
+sad,10,90,37,51,65,41,276,6
+surprised,21,1,28,26,50,12,22,416

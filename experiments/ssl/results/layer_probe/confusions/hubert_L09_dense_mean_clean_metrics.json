@@ -1,0 +1,40 @@
+{
+  "partition": "test",
+  "seed_scores": [
+    {
+      "seed": "42",
+      "uar": 0.6861979166666666,
+      "war": 0.6840277777777778,
+      "predictions": 1440
+    },
+    {
+      "seed": "43",
+      "uar": 0.6705729166666666,
+      "war": 0.6708333333333333,
+      "predictions": 1440
+    },
+    {
+      "seed": "44",
+      "uar": 0.6842447916666667,
+      "war": 0.6868055555555556,
+      "predictions": 1440
+    }
+  ],
+  "uar_mean": 0.6803385416666666,
+  "war_mean": 0.6805555555555555,
+  "uar_std": 0.008513474499102903,
+  "war_std": 0.008533476199614275,
+  "labels": [
+    "angry",
+    "calm",
+    "disgust",
+    "fearful",
+    "happy",
+    "neutral",
+    "sad",
+    "surprised"
+  ],
+  "total_predictions": 4320,
+  "pooled_uar": 0.6803385416666666,
+  "pooled_war": 0.6805555555555556
+}
