@@ -17,7 +17,7 @@ from torch.utils.data import Dataset, DataLoader
 # SETTINGS
 # =========================================================
 
-SEED = 42
+SEED = int(os.environ.get("SER_SEED", "42"))
 EPOCHS = 20
 BATCH_SIZE = 32
 LEARNING_RATE = 0.001
@@ -613,9 +613,9 @@ for fold_number, split in enumerate(splits, start=1):
 
     # Save progress after every completed fold
     for filename, rows in [
-        ("predictions_mfcc_bilstm_augmented_seed42.csv",
+        (f"predictions_mfcc_bilstm_augmented_seed{SEED}.csv",
          all_predictions),
-        ("mfcc_bilstm_augmented_fold_results_seed42.csv",
+        (f"mfcc_bilstm_augmented_fold_results_seed{SEED}.csv",
          fold_results)
     ]:
         with open(DATA_DIR / filename, "w", newline="") as f:
@@ -634,7 +634,7 @@ for fold_number, split in enumerate(splits, start=1):
 
 prediction_file = (
     DATA_DIR /
-    "predictions_mfcc_bilstm_augmented_seed42.csv"
+    f"predictions_mfcc_bilstm_augmented_seed{SEED}.csv"
 )
 
 with open(
@@ -665,7 +665,7 @@ with open(
 
 results_file = (
     DATA_DIR /
-    "mfcc_bilstm_augmented_fold_results_seed42.csv"
+    f"mfcc_bilstm_augmented_fold_results_seed{SEED}.csv"
 )
 
 with open(
