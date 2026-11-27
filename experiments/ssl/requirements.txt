@@ -8,3 +8,4 @@ safetensors==0.5.3
 tqdm==4.67.1
 matplotlib==3.10.3
 torch==2.7.1
+librosa==0.11.0

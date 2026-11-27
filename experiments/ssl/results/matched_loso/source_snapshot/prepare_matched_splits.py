@@ -25,8 +25,10 @@ def main():
     by_id = {r['id']:r for r in rows}
     assert len(rows) == len(by_id) == 1440
     assert Counter(r['person'] for r in rows) == {f'{i:02d}':60 for i in range(1,25)}
-    supplied_table = Path('C:/Users/locsf/Downloads/clip_table (1).csv')
-    supplied_splits = Path('C:/Users/locsf/Downloads/splits (1).json')
+    # The teammate-supplied copies originally checked here are identical to the repository's data/ files.
+    repo_data = Path(__file__).resolve().parents[5]/'data'
+    supplied_table = repo_data/'clip_table.csv'
+    supplied_splits = repo_data/'splits.json'
     assert sorted(read_csv(clip_path), key=lambda r:r['id']) == sorted(read_csv(supplied_table), key=lambda r:r['id'])
     document = json.loads(split_path.read_text(encoding='utf-8-sig'))
     assert document == json.loads(supplied_splits.read_text(encoding='utf-8-sig'))
