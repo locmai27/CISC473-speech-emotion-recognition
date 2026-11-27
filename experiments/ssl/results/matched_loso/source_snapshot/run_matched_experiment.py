@@ -104,7 +104,7 @@ def main():
              '--results-dir',RESULTS,'--validation-manifest',RESULTS/'validation_manifest.json',
              '--log-dir',HERE/'logs'/'frames_matched'])
         run([sys.executable,'-u',PROJECT/'work'/'audit_frame_results.py','--results-dir',RESULTS])
-        run(['C:/Program Files/nodejs/node.exe',PROJECT/'work'/'verify_frame_scorer.cjs',RESULTS])
+        run(['node',PROJECT/'work'/'verify_frame_scorer.cjs',RESULTS])  # Node.js on PATH (was an absolute Windows path)
         run([sys.executable,'-u',HERE/'plot_training_curves.py','--results-dir',RESULTS])
         finalize(started)
     finally:
