@@ -1,0 +1,34 @@
+[
+  {
+    "method": "hubert_dense_mean",
+    "highest_recall": {
+      "emotion": "angry",
+      "recall": 0.7864583333333334
+    },
+    "lowest_recall": {
+      "emotion": "sad",
+      "recall": 0.4861111111111111
+    },
+    "largest_off_diagonal": {
+      "true": "neutral",
+      "prediction": "calm",
+      "fraction_of_true_class": 0.18055555555555555
+    }
+  },
+  {
+    "method": "wav2vec2_dense_mean",
+    "highest_recall": {
+      "emotion": "angry",
+      "recall": 0.6909722222222222
+    },
+    "lowest_recall": {
+      "emotion": "happy",
+      "recall": 0.3576388888888889
+    },
+    "largest_off_diagonal": {
+      "true": "neutral",
+      "prediction": "calm",
+      "fraction_of_true_class": 0.28125
+    }
+  }
+]

@@ -1,0 +1,200 @@
+{
+  "fingerprint": "5a43d58936891530b4643daafcce6ccebf4e9e848601de5c931936b7e3f54120",
+  "method": "wav2vec2_dense_mean",
+  "seed": 42,
+  "split": "left_out_05",
+  "test_person": "05",
+  "validation_persons": [
+    "06",
+    "07",
+    "08"
+  ],
+  "best_epoch": 8,
+  "history": [
+    {
+      "epoch": 1,
+      "training_loss": 1.8246470642089845,
+      "validation_loss": 1.7141553454928928,
+      "validation_uar": 0.29166666666666663,
+      "validation_war": 0.3111111111111111
+    },
+    {
+      "epoch": 2,
+      "training_loss": 1.4334699392318726,
+      "validation_loss": 1.4066367891099718,
+      "validation_uar": 0.41666666666666663,
+      "validation_war": 0.4444444444444444
+    },
+    {
+      "epoch": 3,
+      "training_loss": 1.176971124013265,
+      "validation_loss": 1.3611842261420355,
+      "validation_uar": 0.4791666666666667,
+      "validation_war": 0.4777777777777778
+    },
+    {
+      "epoch": 4,
+      "training_loss": 1.0021409169832864,
+      "validation_loss": 1.2353434244791666,
+      "validation_uar": 0.5,
+      "validation_war": 0.4888888888888889
+    },
+    {
+      "epoch": 5,
+      "training_loss": 0.8537023091316223,
+      "validation_loss": 1.1228506406148275,
+      "validation_uar": 0.5416666666666667,
+      "validation_war": 0.5333333333333333
+    },
+    {
+      "epoch": 6,
+      "training_loss": 0.7775364724795023,
+      "validation_loss": 1.18014497756958,
+      "validation_uar": 0.5364583333333333,
+      "validation_war": 0.5277777777777778
+    },
+    {
+      "epoch": 7,
+      "training_loss": 0.6322778805096945,
+      "validation_loss": 1.335365931193034,
+      "validation_uar": 0.5364583333333334,
+      "validation_war": 0.5166666666666667
+    },
+    {
+      "epoch": 8,
+      "training_loss": 0.5532013670603434,
+      "validation_loss": 1.1011404567294651,
+      "validation_uar": 0.6041666666666667,
+      "validation_war": 0.6055555555555555
+    },
+    {
+      "epoch": 9,
+      "training_loss": 0.4684061992168427,
+      "validation_loss": 1.1980954064263238,
+      "validation_uar": 0.578125,
+      "validation_war": 0.5722222222222222
+    },
+    {
+      "epoch": 10,
+      "training_loss": 0.42063889225323997,
+      "validation_loss": 1.2625798649258084,
+      "validation_uar": 0.546875,
+      "validation_war": 0.5388888888888889
+    },
+    {
+      "epoch": 11,
+      "training_loss": 0.33868046482404074,
+      "validation_loss": 1.3428658803304037,
+      "validation_uar": 0.5729166666666666,
+      "validation_war": 0.5611111111111111
+    },
+    {
+      "epoch": 12,
+      "training_loss": 0.2749539069334666,
+      "validation_loss": 1.2950458102756077,
+      "validation_uar": 0.5729166666666667,
+      "validation_war": 0.5722222222222222
+    }
+  ],
+  "test": {
+    "uar": 0.515625,
+    "war": 0.55,
+    "recalls": [
+      0.0,
+      0.625,
+      0.0,
+      0.5,
+      0.875,
+      0.375,
+      0.875,
+      0.875
+    ],
+    "confusion": [
+      [
+        0,
+        1,
+        0,
+        3,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        5,
+        0,
+        3,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        2,
+        0,
+        1,
+        2,
+        3
+      ],
+      [
+        0,
+        4,
+        0,
+        4,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        7,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        0,
+        3,
+        0,
+        4
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        7,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        7
+      ]
+    ],
+    "n": 60
+  },
+  "device": "cuda",
+  "torch_version": "2.7.1+cu126",
+  "elapsed_seconds": 4.85899999999674,
+  "predictions_sha256": "6640ccaabd8eacb4cf2a781e7f1ab63f1293ccc2ce76a7efc314e4ca4d9cca28"
+}

@@ -1,0 +1,200 @@
+{
+  "fingerprint": "5a43d58936891530b4643daafcce6ccebf4e9e848601de5c931936b7e3f54120",
+  "method": "hubert_dense_mean",
+  "seed": 44,
+  "split": "left_out_10",
+  "test_person": "10",
+  "validation_persons": [
+    "11",
+    "12",
+    "13"
+  ],
+  "best_epoch": 8,
+  "history": [
+    {
+      "epoch": 1,
+      "training_loss": 1.899452199935913,
+      "validation_loss": 1.6354783799913195,
+      "validation_uar": 0.40625,
+      "validation_war": 0.43333333333333335
+    },
+    {
+      "epoch": 2,
+      "training_loss": 1.3472810331980387,
+      "validation_loss": 1.3313079728020563,
+      "validation_uar": 0.49999999999999994,
+      "validation_war": 0.5333333333333333
+    },
+    {
+      "epoch": 3,
+      "training_loss": 0.9911489820480347,
+      "validation_loss": 1.3417259004380968,
+      "validation_uar": 0.5364583333333334,
+      "validation_war": 0.5444444444444444
+    },
+    {
+      "epoch": 4,
+      "training_loss": 0.7302685864766438,
+      "validation_loss": 1.2668030950758191,
+      "validation_uar": 0.5520833333333333,
+      "validation_war": 0.5611111111111111
+    },
+    {
+      "epoch": 5,
+      "training_loss": 0.5768285767237346,
+      "validation_loss": 1.2270616425408258,
+      "validation_uar": 0.5625,
+      "validation_war": 0.5722222222222222
+    },
+    {
+      "epoch": 6,
+      "training_loss": 0.46179381728172303,
+      "validation_loss": 1.2540291786193847,
+      "validation_uar": 0.6041666666666666,
+      "validation_war": 0.6055555555555555
+    },
+    {
+      "epoch": 7,
+      "training_loss": 0.38975940624872846,
+      "validation_loss": 1.196825377146403,
+      "validation_uar": 0.6510416666666666,
+      "validation_war": 0.65
+    },
+    {
+      "epoch": 8,
+      "training_loss": 0.3211243245999018,
+      "validation_loss": 1.149239026175605,
+      "validation_uar": 0.6354166666666667,
+      "validation_war": 0.6277777777777778
+    },
+    {
+      "epoch": 9,
+      "training_loss": 0.27595304171244306,
+      "validation_loss": 1.3211090299818251,
+      "validation_uar": 0.5729166666666666,
+      "validation_war": 0.5555555555555556
+    },
+    {
+      "epoch": 10,
+      "training_loss": 0.23181672354539234,
+      "validation_loss": 1.3583626906077066,
+      "validation_uar": 0.5520833333333333,
+      "validation_war": 0.5444444444444444
+    },
+    {
+      "epoch": 11,
+      "training_loss": 0.20941005766391754,
+      "validation_loss": 1.326700258255005,
+      "validation_uar": 0.6145833333333334,
+      "validation_war": 0.6111111111111112
+    },
+    {
+      "epoch": 12,
+      "training_loss": 0.18118136564890544,
+      "validation_loss": 1.2882204320695665,
+      "validation_uar": 0.6145833333333334,
+      "validation_war": 0.6055555555555555
+    }
+  ],
+  "test": {
+    "uar": 0.59375,
+    "war": 0.6,
+    "recalls": [
+      0.5,
+      0.625,
+      0.625,
+      0.625,
+      0.5,
+      0.75,
+      0.5,
+      0.625
+    ],
+    "confusion": [
+      [
+        2,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        5,
+        0,
+        3,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        5,
+        0,
+        0,
+        3,
+        0,
+        0
+      ],
+      [
+        0,
+        2,
+        1,
+        5,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        3,
+        0,
+        4,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        1,
+        0,
+        6,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        4,
+        0,
+        0,
+        0,
+        4,
+        0
+      ],
+      [
+        0,
+        0,
+        2,
+        0,
+        0,
+        1,
+        0,
+        5
+      ]
+    ],
+    "n": 60
+  },
+  "device": "cuda",
+  "torch_version": "2.7.1+cu126",
+  "elapsed_seconds": 5.186999999998079,
+  "predictions_sha256": "c7669221496a1fc32691b909e2a891c7a164eed44afa6114937bb216da117f8f"
+}

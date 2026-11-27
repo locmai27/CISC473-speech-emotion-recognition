@@ -1,0 +1,200 @@
+{
+  "fingerprint": "5a43d58936891530b4643daafcce6ccebf4e9e848601de5c931936b7e3f54120",
+  "method": "hubert_dense_attention",
+  "seed": 42,
+  "split": "left_out_03",
+  "test_person": "03",
+  "validation_persons": [
+    "04",
+    "05",
+    "06"
+  ],
+  "best_epoch": 8,
+  "history": [
+    {
+      "epoch": 1,
+      "training_loss": 1.8702108828226724,
+      "validation_loss": 1.5646281878153483,
+      "validation_uar": 0.375,
+      "validation_war": 0.4
+    },
+    {
+      "epoch": 2,
+      "training_loss": 1.2637490018208821,
+      "validation_loss": 1.2076950497097438,
+      "validation_uar": 0.5052083333333334,
+      "validation_war": 0.5388888888888889
+    },
+    {
+      "epoch": 3,
+      "training_loss": 0.9871624167760213,
+      "validation_loss": 1.1180708832210964,
+      "validation_uar": 0.53125,
+      "validation_war": 0.5388888888888889
+    },
+    {
+      "epoch": 4,
+      "training_loss": 0.8538922119140625,
+      "validation_loss": 0.9707628197140163,
+      "validation_uar": 0.6145833333333333,
+      "validation_war": 0.6222222222222222
+    },
+    {
+      "epoch": 5,
+      "training_loss": 0.7109350101153056,
+      "validation_loss": 1.088103840086195,
+      "validation_uar": 0.5416666666666666,
+      "validation_war": 0.5722222222222222
+    },
+    {
+      "epoch": 6,
+      "training_loss": 0.6460264706611634,
+      "validation_loss": 0.9898561742570665,
+      "validation_uar": 0.625,
+      "validation_war": 0.6666666666666666
+    },
+    {
+      "epoch": 7,
+      "training_loss": 0.5116707170009613,
+      "validation_loss": 1.0591161568959555,
+      "validation_uar": 0.6197916666666666,
+      "validation_war": 0.6166666666666667
+    },
+    {
+      "epoch": 8,
+      "training_loss": 0.4961896312236786,
+      "validation_loss": 0.9685617804527282,
+      "validation_uar": 0.625,
+      "validation_war": 0.6611111111111111
+    },
+    {
+      "epoch": 9,
+      "training_loss": 0.431107927163442,
+      "validation_loss": 1.0713750706778633,
+      "validation_uar": 0.6197916666666667,
+      "validation_war": 0.6444444444444445
+    },
+    {
+      "epoch": 10,
+      "training_loss": 0.3691416104634603,
+      "validation_loss": 1.1189413944880167,
+      "validation_uar": 0.6197916666666667,
+      "validation_war": 0.6444444444444445
+    },
+    {
+      "epoch": 11,
+      "training_loss": 0.34157106558481853,
+      "validation_loss": 1.0838570223914252,
+      "validation_uar": 0.6197916666666666,
+      "validation_war": 0.6333333333333333
+    },
+    {
+      "epoch": 12,
+      "training_loss": 0.32335251768430073,
+      "validation_loss": 1.1758669800228543,
+      "validation_uar": 0.6302083333333333,
+      "validation_war": 0.6555555555555556
+    }
+  ],
+  "test": {
+    "uar": 0.5625,
+    "war": 0.5833333333333334,
+    "recalls": [
+      0.25,
+      0.125,
+      0.25,
+      0.75,
+      0.5,
+      0.875,
+      1.0,
+      0.75
+    ],
+    "confusion": [
+      [
+        1,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        0,
+        6,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        2,
+        0,
+        0,
+        2,
+        3,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        6,
+        0,
+        1,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        4,
+        1,
+        3,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        7,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        8,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        6
+      ]
+    ],
+    "n": 60
+  },
+  "device": "cuda",
+  "torch_version": "2.7.1+cu126",
+  "elapsed_seconds": 5.359000000004016,
+  "predictions_sha256": "5542863f8d72ab722a28ccdc040afe4296f76ae14717eba7edb96c855ed8a8de"
+}

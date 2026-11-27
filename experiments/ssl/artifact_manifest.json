@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "release_tag": "ssl-midterm-matched-loso-2026-10-19",
+  "repository": "locmai27/CISC473-speech-emotion-recognition",
+  "dataset": "RAVDESS speech, 1440 clips, 24 speakers, 8 classes",
+  "derived_feature_license": "CC BY-NC-SA 4.0; see ATTRIBUTION.md",
+  "assets": [
+    {
+      "name": "ssl-frame-features-hubert-layer12.zip",
+      "bytes": 760158924,
+      "sha256": "04f917d6565bc1ea044c18abd5ef06ded40b81593bb8169853116a0f950529e7",
+      "files": 1441,
+      "id": "hubert_features",
+      "url": "https://github.com/locmai27/CISC473-speech-emotion-recognition/releases/download/ssl-midterm-matched-loso-2026-10-19/ssl-frame-features-hubert-layer12.zip"
+    },
+    {
+      "name": "ssl-frame-features-wav2vec2-layer12.zip",
+      "bytes": 758984213,
+      "sha256": "2ed7e2f76908ec84349296b90b288ff7efb5559b2884656fbf72fc5c11a5a82b",
+      "files": 1441,
+      "id": "wav2vec2_features",
+      "url": "https://github.com/locmai27/CISC473-speech-emotion-recognition/releases/download/ssl-midterm-matched-loso-2026-10-19/ssl-frame-features-wav2vec2-layer12.zip"
+    },
+    {
+      "name": "ssl-matched-loso-checkpoints.zip",
+      "bytes": 128345641,
+      "sha256": "30923a249bbcdad805cb840d36e7e887b24122d89870ac5981c65b010c3d6993",
+      "files": 896,
+      "id": "matched_checkpoints",
+      "url": "https://github.com/locmai27/CISC473-speech-emotion-recognition/releases/download/ssl-midterm-matched-loso-2026-10-19/ssl-matched-loso-checkpoints.zip"
+    },
+    {
+      "name": "ssl-historical-artifacts.zip",
+      "bytes": 168776866,
+      "sha256": "6f9d1dbebe079870aaba2b0e1a018a6ad41e22f801f6f514b166c92297c29621",
+      "files": 4320,
+      "id": "historical",
+      "url": "https://github.com/locmai27/CISC473-speech-emotion-recognition/releases/download/ssl-midterm-matched-loso-2026-10-19/ssl-historical-artifacts.zip"
+    }
+  ]
+}

@@ -17,7 +17,7 @@ from torch.utils.data import Dataset, DataLoader
 # SETTINGS
 # =========================================================
 
-SEED = int(os.environ.get("SER_SEED", "42"))
+SEED = int(os.environ.get("SER_SEED", "42"))  # published runs: 42, 123, 999
 EPOCHS = 20
 BATCH_SIZE = 32
 LEARNING_RATE = 0.001
@@ -29,7 +29,7 @@ random.seed(SEED)
 np.random.seed(SEED)
 torch.manual_seed(SEED)
 
-device = torch.device("cpu")
+device = torch.device(os.environ.get("SER_DEVICE", "cpu"))  # seed 42 ran on CPU; seeds 123/999 on a Colab T4 GPU
 print("Using device:", device)
 
 

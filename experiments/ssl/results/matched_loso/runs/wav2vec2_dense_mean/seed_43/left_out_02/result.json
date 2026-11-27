@@ -1,0 +1,200 @@
+{
+  "fingerprint": "5a43d58936891530b4643daafcce6ccebf4e9e848601de5c931936b7e3f54120",
+  "method": "wav2vec2_dense_mean",
+  "seed": 43,
+  "split": "left_out_02",
+  "test_person": "02",
+  "validation_persons": [
+    "03",
+    "04",
+    "05"
+  ],
+  "best_epoch": 8,
+  "history": [
+    {
+      "epoch": 1,
+      "training_loss": 1.8216956520080567,
+      "validation_loss": 1.5917863210042318,
+      "validation_uar": 0.36458333333333337,
+      "validation_war": 0.38333333333333336
+    },
+    {
+      "epoch": 2,
+      "training_loss": 1.4188824733098349,
+      "validation_loss": 1.3695445166693794,
+      "validation_uar": 0.515625,
+      "validation_war": 0.5222222222222223
+    },
+    {
+      "epoch": 3,
+      "training_loss": 1.152807544072469,
+      "validation_loss": 1.38436983956231,
+      "validation_uar": 0.5260416666666667,
+      "validation_war": 0.5222222222222223
+    },
+    {
+      "epoch": 4,
+      "training_loss": 0.9930687379837037,
+      "validation_loss": 1.4579054832458496,
+      "validation_uar": 0.43229166666666663,
+      "validation_war": 0.45
+    },
+    {
+      "epoch": 5,
+      "training_loss": 0.8565437602996826,
+      "validation_loss": 1.3258090337117514,
+      "validation_uar": 0.5052083333333333,
+      "validation_war": 0.5
+    },
+    {
+      "epoch": 6,
+      "training_loss": 0.7611414893468221,
+      "validation_loss": 1.3924887445237901,
+      "validation_uar": 0.47395833333333337,
+      "validation_war": 0.48333333333333334
+    },
+    {
+      "epoch": 7,
+      "training_loss": 0.651623211701711,
+      "validation_loss": 1.3228638331095377,
+      "validation_uar": 0.5572916666666667,
+      "validation_war": 0.5555555555555556
+    },
+    {
+      "epoch": 8,
+      "training_loss": 0.5444341476758321,
+      "validation_loss": 1.258789094289144,
+      "validation_uar": 0.5677083333333333,
+      "validation_war": 0.5666666666666667
+    },
+    {
+      "epoch": 9,
+      "training_loss": 0.4904475192228953,
+      "validation_loss": 1.4050157864888508,
+      "validation_uar": 0.578125,
+      "validation_war": 0.5777777777777777
+    },
+    {
+      "epoch": 10,
+      "training_loss": 0.4334685456752777,
+      "validation_loss": 1.3390184190538195,
+      "validation_uar": 0.5833333333333334,
+      "validation_war": 0.5833333333333334
+    },
+    {
+      "epoch": 11,
+      "training_loss": 0.408773060242335,
+      "validation_loss": 1.3856498718261718,
+      "validation_uar": 0.5833333333333334,
+      "validation_war": 0.5833333333333334
+    },
+    {
+      "epoch": 12,
+      "training_loss": 0.30726923247178395,
+      "validation_loss": 1.5619219885932074,
+      "validation_uar": 0.5625,
+      "validation_war": 0.5611111111111111
+    }
+  ],
+  "test": {
+    "uar": 0.71875,
+    "war": 0.7,
+    "recalls": [
+      1.0,
+      0.875,
+      1.0,
+      0.25,
+      1.0,
+      0.75,
+      0.375,
+      0.5
+    ],
+    "confusion": [
+      [
+        4,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        7,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        8,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        4,
+        2,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        8,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        0,
+        6,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        1,
+        1,
+        2,
+        0,
+        3,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        3,
+        0,
+        0,
+        4
+      ]
+    ],
+    "n": 60
+  },
+  "device": "cuda",
+  "torch_version": "2.7.1+cu126",
+  "elapsed_seconds": 6.25,
+  "predictions_sha256": "2480d0e5a72b33f408218a8ddbdbdc6fcc0fc00703219b1607724b304d2bded9"
+}

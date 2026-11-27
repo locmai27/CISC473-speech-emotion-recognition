@@ -1,0 +1,172 @@
+{
+  "fingerprint": "5a43d58936891530b4643daafcce6ccebf4e9e848601de5c931936b7e3f54120",
+  "method": "wav2vec2_dense_mean",
+  "seed": 44,
+  "split": "left_out_23",
+  "test_person": "23",
+  "validation_persons": [
+    "24",
+    "01",
+    "02"
+  ],
+  "best_epoch": 4,
+  "history": [
+    {
+      "epoch": 1,
+      "training_loss": 1.8301529916127524,
+      "validation_loss": 1.5451614273918999,
+      "validation_uar": 0.421875,
+      "validation_war": 0.4388888888888889
+    },
+    {
+      "epoch": 2,
+      "training_loss": 1.4311401907602945,
+      "validation_loss": 1.2464445643954807,
+      "validation_uar": 0.4947916666666667,
+      "validation_war": 0.5166666666666667
+    },
+    {
+      "epoch": 3,
+      "training_loss": 1.2038477532068887,
+      "validation_loss": 1.2621149698893228,
+      "validation_uar": 0.5052083333333333,
+      "validation_war": 0.5222222222222223
+    },
+    {
+      "epoch": 4,
+      "training_loss": 0.981476232210795,
+      "validation_loss": 1.0889293246799046,
+      "validation_uar": 0.640625,
+      "validation_war": 0.6444444444444445
+    },
+    {
+      "epoch": 5,
+      "training_loss": 0.8511219040552775,
+      "validation_loss": 1.2888520028856065,
+      "validation_uar": 0.546875,
+      "validation_war": 0.55
+    },
+    {
+      "epoch": 6,
+      "training_loss": 0.7212810365358988,
+      "validation_loss": 1.2400312953525119,
+      "validation_uar": 0.5885416666666666,
+      "validation_war": 0.5888888888888889
+    },
+    {
+      "epoch": 7,
+      "training_loss": 0.5874431188901266,
+      "validation_loss": 1.1423407130771213,
+      "validation_uar": 0.609375,
+      "validation_war": 0.6055555555555555
+    },
+    {
+      "epoch": 8,
+      "training_loss": 0.5212151575088501,
+      "validation_loss": 1.1685573683844672,
+      "validation_uar": 0.6354166666666667,
+      "validation_war": 0.6333333333333333
+    }
+  ],
+  "test": {
+    "uar": 0.390625,
+    "war": 0.4166666666666667,
+    "recalls": [
+      0.0,
+      0.0,
+      0.125,
+      0.375,
+      0.5,
+      0.125,
+      1.0,
+      1.0
+    ],
+    "confusion": [
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        2
+      ],
+      [
+        3,
+        0,
+        0,
+        2,
+        0,
+        1,
+        0,
+        2
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        7
+      ],
+      [
+        2,
+        0,
+        1,
+        3,
+        0,
+        0,
+        2,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        4,
+        0,
+        0,
+        4
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        3,
+        3
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        8,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        8
+      ]
+    ],
+    "n": 60
+  },
+  "device": "cuda",
+  "torch_version": "2.7.1+cu126",
+  "elapsed_seconds": 3.2030000000013388,
+  "predictions_sha256": "0aa7501f30f61852be31dfa088f13c88d4e4e41217dcb0f4bb3d211f34952116"
+}

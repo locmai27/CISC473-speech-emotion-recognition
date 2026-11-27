@@ -1,0 +1,200 @@
+{
+  "fingerprint": "5a43d58936891530b4643daafcce6ccebf4e9e848601de5c931936b7e3f54120",
+  "method": "hubert_dense_attention",
+  "seed": 44,
+  "split": "left_out_02",
+  "test_person": "02",
+  "validation_persons": [
+    "03",
+    "04",
+    "05"
+  ],
+  "best_epoch": 8,
+  "history": [
+    {
+      "epoch": 1,
+      "training_loss": 1.8829710578918457,
+      "validation_loss": 1.7116793314615886,
+      "validation_uar": 0.32291666666666663,
+      "validation_war": 0.34444444444444444
+    },
+    {
+      "epoch": 2,
+      "training_loss": 1.3539239263534546,
+      "validation_loss": 1.4474449475606284,
+      "validation_uar": 0.4010416666666667,
+      "validation_war": 0.42777777777777776
+    },
+    {
+      "epoch": 3,
+      "training_loss": 1.0738339026769002,
+      "validation_loss": 1.2821492248111301,
+      "validation_uar": 0.5677083333333334,
+      "validation_war": 0.5722222222222222
+    },
+    {
+      "epoch": 4,
+      "training_loss": 0.8677757565180461,
+      "validation_loss": 1.178869644800822,
+      "validation_uar": 0.5729166666666667,
+      "validation_war": 0.5888888888888889
+    },
+    {
+      "epoch": 5,
+      "training_loss": 0.7272552315394084,
+      "validation_loss": 1.079366832309299,
+      "validation_uar": 0.6302083333333334,
+      "validation_war": 0.6333333333333333
+    },
+    {
+      "epoch": 6,
+      "training_loss": 0.6196715807914734,
+      "validation_loss": 1.116530418395996,
+      "validation_uar": 0.640625,
+      "validation_war": 0.65
+    },
+    {
+      "epoch": 7,
+      "training_loss": 0.5558313421408335,
+      "validation_loss": 1.1700906647576226,
+      "validation_uar": 0.6041666666666666,
+      "validation_war": 0.6111111111111112
+    },
+    {
+      "epoch": 8,
+      "training_loss": 0.48645743290583293,
+      "validation_loss": 0.9797807958390977,
+      "validation_uar": 0.6354166666666667,
+      "validation_war": 0.6555555555555556
+    },
+    {
+      "epoch": 9,
+      "training_loss": 0.4585267694791158,
+      "validation_loss": 1.1147284401787652,
+      "validation_uar": 0.640625,
+      "validation_war": 0.6388888888888888
+    },
+    {
+      "epoch": 10,
+      "training_loss": 0.37788533449172973,
+      "validation_loss": 1.09929322136773,
+      "validation_uar": 0.6458333333333334,
+      "validation_war": 0.6611111111111111
+    },
+    {
+      "epoch": 11,
+      "training_loss": 0.33244217713673907,
+      "validation_loss": 1.3801301797231038,
+      "validation_uar": 0.609375,
+      "validation_war": 0.6222222222222222
+    },
+    {
+      "epoch": 12,
+      "training_loss": 0.34259661912918093,
+      "validation_loss": 1.1588174475563897,
+      "validation_uar": 0.65625,
+      "validation_war": 0.6611111111111111
+    }
+  ],
+  "test": {
+    "uar": 0.8125,
+    "war": 0.8,
+    "recalls": [
+      1.0,
+      0.875,
+      1.0,
+      0.25,
+      0.875,
+      0.625,
+      0.875,
+      1.0
+    ],
+    "confusion": [
+      [
+        4,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        7,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        8,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        2,
+        3,
+        1,
+        2,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        7,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        3,
+        0,
+        0,
+        5,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        7,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        8
+      ]
+    ],
+    "n": 60
+  },
+  "device": "cuda",
+  "torch_version": "2.7.1+cu126",
+  "elapsed_seconds": 5.765999999995984,
+  "predictions_sha256": "6d17ef01c6d88df66be8c391fcc8e5ed87494c2b407f25b2b91d307d9cb65733"
+}

@@ -1,0 +1,21 @@
+{
+  "python_version": "3.11.5",
+  "platform": "Windows-10-10.0.22631-SP0",
+  "torch_runtime_version": "2.7.1+cpu",
+  "cuda_available": false,
+  "execution_device": "cpu",
+  "dependencies": {
+    "torch": "2.7.1",
+    "transformers": "4.52.4",
+    "huggingface-hub": "0.32.4",
+    "numpy": "1.26.4",
+    "scipy": "1.15.3",
+    "soundfile": "0.13.1",
+    "tokenizers": "0.21.4",
+    "safetensors": "0.5.3",
+    "tqdm": "4.67.1",
+    "matplotlib": "3.10.3",
+    "cffi": "2.1.1",
+    "pycparser": "3.11"
+  }
+}

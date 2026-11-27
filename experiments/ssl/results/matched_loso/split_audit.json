@@ -1,0 +1,35 @@
+{
+  "passed": true,
+  "folds": 24,
+  "clips": 1440,
+  "matches_supplied_clip_table": true,
+  "matches_supplied_splits": true,
+  "matches_confirmed_cyclic_rule": true,
+  "disjoint_train_validation_test_speakers": true,
+  "all_original_test_sets_preserved": true,
+  "test_coverage_exactly_once": true,
+  "partition_sizes": [
+    1200,
+    180,
+    60
+  ],
+  "validation_manifest_sha256": "3d2f393e9c9aa555d866d7e6fd462ebb8d37e24f0197d77d25eb1ff80062da44",
+  "cached_features": {
+    "hubert": {
+      "clips": 1440,
+      "frames": 265223,
+      "feature_fingerprint": "5cc43d537d9f8d79332993a3ae63574e4fcf20bf19126c969a9280840ddb599b",
+      "audio_hashes_match": true,
+      "labels_and_speakers_match": true,
+      "finite_full_sequences": true
+    },
+    "wav2vec2": {
+      "clips": 1440,
+      "frames": 265223,
+      "feature_fingerprint": "5b2634427f984edb8175efc72a9532bd144593a78ddd473cbe926dd16fde8469",
+      "audio_hashes_match": true,
+      "labels_and_speakers_match": true,
+      "finite_full_sequences": true
+    }
+  }
+}

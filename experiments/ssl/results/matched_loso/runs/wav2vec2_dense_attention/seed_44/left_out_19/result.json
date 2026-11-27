@@ -1,0 +1,200 @@
+{
+  "fingerprint": "5a43d58936891530b4643daafcce6ccebf4e9e848601de5c931936b7e3f54120",
+  "method": "wav2vec2_dense_attention",
+  "seed": 44,
+  "split": "left_out_19",
+  "test_person": "19",
+  "validation_persons": [
+    "20",
+    "21",
+    "22"
+  ],
+  "best_epoch": 8,
+  "history": [
+    {
+      "epoch": 1,
+      "training_loss": 1.8166017548243205,
+      "validation_loss": 1.639911248948839,
+      "validation_uar": 0.3541666666666667,
+      "validation_war": 0.37777777777777777
+    },
+    {
+      "epoch": 2,
+      "training_loss": 1.401297664642334,
+      "validation_loss": 1.3431241035461425,
+      "validation_uar": 0.4791666666666667,
+      "validation_war": 0.5111111111111111
+    },
+    {
+      "epoch": 3,
+      "training_loss": 1.181837517420451,
+      "validation_loss": 1.3042996300591363,
+      "validation_uar": 0.5104166666666666,
+      "validation_war": 0.5444444444444444
+    },
+    {
+      "epoch": 4,
+      "training_loss": 0.9766606036822001,
+      "validation_loss": 1.30348727968004,
+      "validation_uar": 0.5052083333333333,
+      "validation_war": 0.5388888888888889
+    },
+    {
+      "epoch": 5,
+      "training_loss": 0.8682433756192526,
+      "validation_loss": 1.2485595067342123,
+      "validation_uar": 0.453125,
+      "validation_war": 0.48333333333333334
+    },
+    {
+      "epoch": 6,
+      "training_loss": 0.754990254243215,
+      "validation_loss": 1.2618405024210613,
+      "validation_uar": 0.48958333333333337,
+      "validation_war": 0.5166666666666667
+    },
+    {
+      "epoch": 7,
+      "training_loss": 0.6631501491864522,
+      "validation_loss": 1.328629822201199,
+      "validation_uar": 0.5052083333333334,
+      "validation_war": 0.5333333333333333
+    },
+    {
+      "epoch": 8,
+      "training_loss": 0.6014425071080526,
+      "validation_loss": 1.236718644036187,
+      "validation_uar": 0.5260416666666667,
+      "validation_war": 0.55
+    },
+    {
+      "epoch": 9,
+      "training_loss": 0.5324982643127442,
+      "validation_loss": 1.2542492230733235,
+      "validation_uar": 0.5208333333333333,
+      "validation_war": 0.5388888888888889
+    },
+    {
+      "epoch": 10,
+      "training_loss": 0.4499700097242991,
+      "validation_loss": 1.3153927114274766,
+      "validation_uar": 0.515625,
+      "validation_war": 0.5444444444444444
+    },
+    {
+      "epoch": 11,
+      "training_loss": 0.3821791764100393,
+      "validation_loss": 1.3610803286234539,
+      "validation_uar": 0.4947916666666667,
+      "validation_war": 0.5222222222222223
+    },
+    {
+      "epoch": 12,
+      "training_loss": 0.33899167815844217,
+      "validation_loss": 1.3477996932135687,
+      "validation_uar": 0.5052083333333334,
+      "validation_war": 0.5277777777777778
+    }
+  ],
+  "test": {
+    "uar": 0.5,
+    "war": 0.5166666666666667,
+    "recalls": [
+      0.25,
+      0.75,
+      0.0,
+      0.625,
+      0.875,
+      0.375,
+      0.875,
+      0.25
+    ],
+    "confusion": [
+      [
+        1,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        6,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        3,
+        0,
+        1,
+        3,
+        0
+      ],
+      [
+        0,
+        3,
+        0,
+        5,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        7,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        3,
+        0,
+        3,
+        2,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        7,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        4,
+        2
+      ]
+    ],
+    "n": 60
+  },
+  "device": "cuda",
+  "torch_version": "2.7.1+cu126",
+  "elapsed_seconds": 5.139999999999418,
+  "predictions_sha256": "a0672e770d736ef1e5d9a86123df816d2b30a80b7c7566d78d738ef5cabda536"
+}

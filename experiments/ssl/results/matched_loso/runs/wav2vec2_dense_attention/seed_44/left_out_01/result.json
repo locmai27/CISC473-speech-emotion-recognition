@@ -1,0 +1,200 @@
+{
+  "fingerprint": "5a43d58936891530b4643daafcce6ccebf4e9e848601de5c931936b7e3f54120",
+  "method": "wav2vec2_dense_attention",
+  "seed": 44,
+  "split": "left_out_01",
+  "test_person": "01",
+  "validation_persons": [
+    "02",
+    "03",
+    "04"
+  ],
+  "best_epoch": 8,
+  "history": [
+    {
+      "epoch": 1,
+      "training_loss": 1.8184935172398886,
+      "validation_loss": 1.5434382014804415,
+      "validation_uar": 0.3802083333333333,
+      "validation_war": 0.40555555555555556
+    },
+    {
+      "epoch": 2,
+      "training_loss": 1.3897006066640218,
+      "validation_loss": 1.5158277299669054,
+      "validation_uar": 0.4635416666666667,
+      "validation_war": 0.48333333333333334
+    },
+    {
+      "epoch": 3,
+      "training_loss": 1.2156948359807331,
+      "validation_loss": 1.3892331865098742,
+      "validation_uar": 0.421875,
+      "validation_war": 0.4444444444444444
+    },
+    {
+      "epoch": 4,
+      "training_loss": 0.9762922867139181,
+      "validation_loss": 1.34074035220676,
+      "validation_uar": 0.5208333333333334,
+      "validation_war": 0.5055555555555555
+    },
+    {
+      "epoch": 5,
+      "training_loss": 0.8730768394470215,
+      "validation_loss": 1.2357544634077284,
+      "validation_uar": 0.59375,
+      "validation_war": 0.5833333333333334
+    },
+    {
+      "epoch": 6,
+      "training_loss": 0.7710246483484904,
+      "validation_loss": 1.5754944695366753,
+      "validation_uar": 0.46875,
+      "validation_war": 0.46111111111111114
+    },
+    {
+      "epoch": 7,
+      "training_loss": 0.6742785982290904,
+      "validation_loss": 1.3951283348931207,
+      "validation_uar": 0.5572916666666666,
+      "validation_war": 0.5388888888888889
+    },
+    {
+      "epoch": 8,
+      "training_loss": 0.5931932361920674,
+      "validation_loss": 1.2064521683586968,
+      "validation_uar": 0.5989583333333333,
+      "validation_war": 0.5777777777777777
+    },
+    {
+      "epoch": 9,
+      "training_loss": 0.5323217940330506,
+      "validation_loss": 1.3014565467834474,
+      "validation_uar": 0.5885416666666667,
+      "validation_war": 0.5666666666666667
+    },
+    {
+      "epoch": 10,
+      "training_loss": 0.4547741913795471,
+      "validation_loss": 1.3167270766364203,
+      "validation_uar": 0.6041666666666667,
+      "validation_war": 0.5833333333333334
+    },
+    {
+      "epoch": 11,
+      "training_loss": 0.4208906932671865,
+      "validation_loss": 1.2439261224534777,
+      "validation_uar": 0.6145833333333333,
+      "validation_war": 0.5944444444444444
+    },
+    {
+      "epoch": 12,
+      "training_loss": 0.3353546663125356,
+      "validation_loss": 1.2571027490827773,
+      "validation_uar": 0.609375,
+      "validation_war": 0.5888888888888889
+    }
+  ],
+  "test": {
+    "uar": 0.515625,
+    "war": 0.5333333333333333,
+    "recalls": [
+      0.25,
+      0.875,
+      0.125,
+      0.625,
+      0.625,
+      1.0,
+      0.625,
+      0.0
+    ],
+    "confusion": [
+      [
+        1,
+        2,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        7,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        2,
+        1,
+        2,
+        1,
+        2,
+        0,
+        0
+      ],
+      [
+        0,
+        3,
+        0,
+        5,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        5,
+        3,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        8,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        5,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        1,
+        1,
+        5,
+        0,
+        0
+      ]
+    ],
+    "n": 60
+  },
+  "device": "cuda",
+  "torch_version": "2.7.1+cu126",
+  "elapsed_seconds": 5.25,
+  "predictions_sha256": "40c96a26a49037280093c466d7b0e5930d46991ad76eeb2e1ace5990116b763a"
+}

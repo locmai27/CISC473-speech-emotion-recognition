@@ -1,0 +1,200 @@
+{
+  "fingerprint": "5a43d58936891530b4643daafcce6ccebf4e9e848601de5c931936b7e3f54120",
+  "method": "hubert_dense_mean",
+  "seed": 44,
+  "split": "left_out_11",
+  "test_person": "11",
+  "validation_persons": [
+    "12",
+    "13",
+    "14"
+  ],
+  "best_epoch": 8,
+  "history": [
+    {
+      "epoch": 1,
+      "training_loss": 1.9081347052256266,
+      "validation_loss": 1.6517724566989476,
+      "validation_uar": 0.375,
+      "validation_war": 0.4
+    },
+    {
+      "epoch": 2,
+      "training_loss": 1.3535751056671144,
+      "validation_loss": 1.3385511610243055,
+      "validation_uar": 0.5,
+      "validation_war": 0.5333333333333333
+    },
+    {
+      "epoch": 3,
+      "training_loss": 0.9825968750317892,
+      "validation_loss": 1.2634456051720513,
+      "validation_uar": 0.5729166666666667,
+      "validation_war": 0.5888888888888889
+    },
+    {
+      "epoch": 4,
+      "training_loss": 0.7285423986117046,
+      "validation_loss": 1.1690402878655328,
+      "validation_uar": 0.6041666666666666,
+      "validation_war": 0.6111111111111112
+    },
+    {
+      "epoch": 5,
+      "training_loss": 0.587246763308843,
+      "validation_loss": 1.1512185096740724,
+      "validation_uar": 0.59375,
+      "validation_war": 0.6166666666666667
+    },
+    {
+      "epoch": 6,
+      "training_loss": 0.46925653735796613,
+      "validation_loss": 1.1958874119652643,
+      "validation_uar": 0.6041666666666667,
+      "validation_war": 0.6055555555555555
+    },
+    {
+      "epoch": 7,
+      "training_loss": 0.3989157283306122,
+      "validation_loss": 1.096588208940294,
+      "validation_uar": 0.6927083333333334,
+      "validation_war": 0.7
+    },
+    {
+      "epoch": 8,
+      "training_loss": 0.3267811369895935,
+      "validation_loss": 1.0696686532762316,
+      "validation_uar": 0.6927083333333334,
+      "validation_war": 0.6888888888888889
+    },
+    {
+      "epoch": 9,
+      "training_loss": 0.2818890968958537,
+      "validation_loss": 1.2134976757897271,
+      "validation_uar": 0.65625,
+      "validation_war": 0.6444444444444445
+    },
+    {
+      "epoch": 10,
+      "training_loss": 0.23302596747875215,
+      "validation_loss": 1.2538099500868056,
+      "validation_uar": 0.640625,
+      "validation_war": 0.6333333333333333
+    },
+    {
+      "epoch": 11,
+      "training_loss": 0.20646358887354532,
+      "validation_loss": 1.2419719060262044,
+      "validation_uar": 0.6302083333333333,
+      "validation_war": 0.6333333333333333
+    },
+    {
+      "epoch": 12,
+      "training_loss": 0.18506635745366415,
+      "validation_loss": 1.2747179667154949,
+      "validation_uar": 0.6041666666666667,
+      "validation_war": 0.6055555555555555
+    }
+  ],
+  "test": {
+    "uar": 0.65625,
+    "war": 0.6333333333333333,
+    "recalls": [
+      1.0,
+      0.625,
+      0.25,
+      0.125,
+      1.0,
+      0.625,
+      0.875,
+      0.75
+    ],
+    "confusion": [
+      [
+        4,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        3,
+        5,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        3,
+        0,
+        2,
+        0,
+        2,
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        3,
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        8,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        5,
+        0,
+        3
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        7,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        6
+      ]
+    ],
+    "n": 60
+  },
+  "device": "cuda",
+  "torch_version": "2.7.1+cu126",
+  "elapsed_seconds": 4.953000000001339,
+  "predictions_sha256": "a86c52b1fdfa97961b487ae1933782db16bc86642bb49888fbe62dda829808a0"
+}

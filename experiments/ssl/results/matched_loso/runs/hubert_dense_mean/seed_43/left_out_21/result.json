@@ -1,0 +1,200 @@
+{
+  "fingerprint": "5a43d58936891530b4643daafcce6ccebf4e9e848601de5c931936b7e3f54120",
+  "method": "hubert_dense_mean",
+  "seed": 43,
+  "split": "left_out_21",
+  "test_person": "21",
+  "validation_persons": [
+    "22",
+    "23",
+    "24"
+  ],
+  "best_epoch": 8,
+  "history": [
+    {
+      "epoch": 1,
+      "training_loss": 1.8851066080729166,
+      "validation_loss": 1.6410299301147462,
+      "validation_uar": 0.2916666666666667,
+      "validation_war": 0.3111111111111111
+    },
+    {
+      "epoch": 2,
+      "training_loss": 1.339579431215922,
+      "validation_loss": 1.248032612270779,
+      "validation_uar": 0.5260416666666666,
+      "validation_war": 0.5611111111111111
+    },
+    {
+      "epoch": 3,
+      "training_loss": 0.9722284285227457,
+      "validation_loss": 1.1512103133731417,
+      "validation_uar": 0.5572916666666667,
+      "validation_war": 0.5833333333333334
+    },
+    {
+      "epoch": 4,
+      "training_loss": 0.7644238444169362,
+      "validation_loss": 1.1754741032918294,
+      "validation_uar": 0.4947916666666667,
+      "validation_war": 0.5166666666666667
+    },
+    {
+      "epoch": 5,
+      "training_loss": 0.6035271835327148,
+      "validation_loss": 1.0893827650282117,
+      "validation_uar": 0.5833333333333334,
+      "validation_war": 0.5944444444444444
+    },
+    {
+      "epoch": 6,
+      "training_loss": 0.5339167535305023,
+      "validation_loss": 1.137140581342909,
+      "validation_uar": 0.5052083333333334,
+      "validation_war": 0.5277777777777778
+    },
+    {
+      "epoch": 7,
+      "training_loss": 0.41130910158157347,
+      "validation_loss": 1.0263937261369493,
+      "validation_uar": 0.5989583333333334,
+      "validation_war": 0.6388888888888888
+    },
+    {
+      "epoch": 8,
+      "training_loss": 0.34342531323432923,
+      "validation_loss": 0.9404187149471707,
+      "validation_uar": 0.6614583333333333,
+      "validation_war": 0.6722222222222223
+    },
+    {
+      "epoch": 9,
+      "training_loss": 0.32100555578867596,
+      "validation_loss": 1.0023328092363146,
+      "validation_uar": 0.6041666666666667,
+      "validation_war": 0.6222222222222222
+    },
+    {
+      "epoch": 10,
+      "training_loss": 0.2849136153856913,
+      "validation_loss": 0.9614811950259738,
+      "validation_uar": 0.6458333333333334,
+      "validation_war": 0.6611111111111111
+    },
+    {
+      "epoch": 11,
+      "training_loss": 0.21825175722440085,
+      "validation_loss": 0.9749872896406385,
+      "validation_uar": 0.6822916666666666,
+      "validation_war": 0.6833333333333333
+    },
+    {
+      "epoch": 12,
+      "training_loss": 0.19258067627747855,
+      "validation_loss": 0.9998869789971245,
+      "validation_uar": 0.640625,
+      "validation_war": 0.6611111111111111
+    }
+  ],
+  "test": {
+    "uar": 0.71875,
+    "war": 0.7666666666666667,
+    "recalls": [
+      0.0,
+      1.0,
+      1.0,
+      0.5,
+      1.0,
+      0.625,
+      0.75,
+      0.875
+    ],
+    "confusion": [
+      [
+        0,
+        0,
+        0,
+        4,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        8,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        8,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        3,
+        0,
+        4,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        8,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        0,
+        5,
+        2,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        6,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        7
+      ]
+    ],
+    "n": 60
+  },
+  "device": "cuda",
+  "torch_version": "2.7.1+cu126",
+  "elapsed_seconds": 5.828000000001339,
+  "predictions_sha256": "e13a4d523d69a3b0ec01dfdb7f17a12f5e3be694154431bf5329ae88220ebf67"
+}

@@ -1,0 +1,200 @@
+{
+  "fingerprint": "87eb8e7ed8fc35f15211f230ac255d12dc4b62c0e57c62cc166430610f2a261f",
+  "method": "wav2vec2_dense_mean",
+  "seed": 44,
+  "split": "left_out_10",
+  "test_person": "10",
+  "validation_persons": [
+    "04",
+    "09",
+    "12"
+  ],
+  "best_epoch": 8,
+  "history": [
+    {
+      "epoch": 1,
+      "training_loss": 1.8002620712916055,
+      "validation_loss": 1.8043997764587403,
+      "validation_uar": 0.3020833333333333,
+      "validation_war": 0.32222222222222224
+    },
+    {
+      "epoch": 2,
+      "training_loss": 1.3737897952397664,
+      "validation_loss": 1.7129084904988607,
+      "validation_uar": 0.33333333333333337,
+      "validation_war": 0.34444444444444444
+    },
+    {
+      "epoch": 3,
+      "training_loss": 1.1702829567591349,
+      "validation_loss": 1.6234125879075791,
+      "validation_uar": 0.44270833333333337,
+      "validation_war": 0.4388888888888889
+    },
+    {
+      "epoch": 4,
+      "training_loss": 0.9346258703867595,
+      "validation_loss": 1.6335773150126138,
+      "validation_uar": 0.40625,
+      "validation_war": 0.40555555555555556
+    },
+    {
+      "epoch": 5,
+      "training_loss": 0.803224794069926,
+      "validation_loss": 1.6733568085564507,
+      "validation_uar": 0.44791666666666663,
+      "validation_war": 0.46111111111111114
+    },
+    {
+      "epoch": 6,
+      "training_loss": 0.6954254460334778,
+      "validation_loss": 1.6561710675557455,
+      "validation_uar": 0.46354166666666674,
+      "validation_war": 0.4722222222222222
+    },
+    {
+      "epoch": 7,
+      "training_loss": 0.5877221512794495,
+      "validation_loss": 1.623183790842692,
+      "validation_uar": 0.5,
+      "validation_war": 0.4888888888888889
+    },
+    {
+      "epoch": 8,
+      "training_loss": 0.5302320996920268,
+      "validation_loss": 1.4918965445624457,
+      "validation_uar": 0.5052083333333333,
+      "validation_war": 0.5
+    },
+    {
+      "epoch": 9,
+      "training_loss": 0.42327582200368247,
+      "validation_loss": 1.678942330678304,
+      "validation_uar": 0.5,
+      "validation_war": 0.5
+    },
+    {
+      "epoch": 10,
+      "training_loss": 0.35315197547276816,
+      "validation_loss": 1.9149348153008354,
+      "validation_uar": 0.4635416666666667,
+      "validation_war": 0.45555555555555555
+    },
+    {
+      "epoch": 11,
+      "training_loss": 0.3200996353228887,
+      "validation_loss": 2.15718805525038,
+      "validation_uar": 0.4791666666666667,
+      "validation_war": 0.4666666666666667
+    },
+    {
+      "epoch": 12,
+      "training_loss": 0.23706366896629333,
+      "validation_loss": 2.11686905225118,
+      "validation_uar": 0.47395833333333337,
+      "validation_war": 0.48333333333333334
+    }
+  ],
+  "test": {
+    "uar": 0.40625,
+    "war": 0.43333333333333335,
+    "recalls": [
+      0.0,
+      0.0,
+      0.125,
+      0.5,
+      0.25,
+      0.75,
+      0.75,
+      0.875
+    ],
+    "confusion": [
+      [
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        7,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        1,
+        0,
+        4,
+        0,
+        2
+      ],
+      [
+        0,
+        1,
+        0,
+        4,
+        0,
+        1,
+        2,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        2,
+        1,
+        2,
+        2
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        6,
+        0,
+        2
+      ],
+      [
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        6,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        7
+      ]
+    ],
+    "n": 60
+  },
+  "device": "cuda",
+  "torch_version": "2.7.1+cu126",
+  "elapsed_seconds": 6.171999999998661,
+  "predictions_sha256": "9e47afc6efa3540191d738a934b317c83db24d65993e28732d55150e593eab24"
+}
