@@ -1,3 +1,4 @@
+import os
 from pathlib import Path
 import csv
 import json
@@ -16,7 +17,7 @@ from torch.utils.data import Dataset, DataLoader
 # SETTINGS
 # =========================================================
 
-SEED = 999
+SEED = int(os.environ.get("SER_SEED", "999"))  # published runs: 42, 123, 999
 EPOCHS = 20
 BATCH_SIZE = 32
 LEARNING_RATE = 0.001

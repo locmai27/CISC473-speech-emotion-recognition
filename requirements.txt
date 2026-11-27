@@ -1,0 +1,2 @@
+# All pipelines (MFCC + BiLSTM, SSL, layer probing). CUDA users: see experiments/ssl/README.md for the torch index URL.
+-r experiments/ssl/requirements.txt

@@ -50,3 +50,15 @@ From the repository root:
 
 SER_DATA_DIR=/path/to/data python scripts/train_bilstm_augmented.py
 
+## Three-seed results (seeds 42, 123, 999)
+
+Seeds 123 and 999 were added with the same script (SER_SEED), protocol, and settings as seed 42. They ran on a Colab T4 GPU (SER_DEVICE=cuda); seed 42 ran on CPU. Baselines are the published MFCC + BiLSTM runs with the same seeds.
+
+| Seed | Baseline UAR | Augmented UAR | UAR gain | Baseline WAR | Augmented WAR |
+|---:|---:|---:|---:|---:|---:|
+| 42 | 30.01% | 34.44% | +4.43 pp | 31.67% | 35.90% |
+| 123 | 28.45% | 36.78% | +8.33 pp | 30.00% | 38.82% |
+| 999 | 29.43% | 39.84% | +10.42 pp | 31.25% | 41.25% |
+| Mean ± SD | 29.30 ± 0.79% | 37.02 ± 2.71% | 7.73 ± 3.04 pp | 30.97 ± 0.87% | 38.66 ± 2.68% |
+
+Per-seed predictions: predictions_mfcc_bilstm_augmented_seed{42,123,999}.csv; summary with per-emotion recall: summary_3seeds.csv. Augmented training still uses 4x training examples (and optimizer steps) per epoch.
